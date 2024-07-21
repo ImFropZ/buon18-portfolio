@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Footer, NavBar } from "@/components";
+import { cn } from "@/components/utils";
 
 export const metadata: Metadata = {
   title: "Buon18 Portfolio",
@@ -52,7 +54,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={gothamFont.className}>{children}</body>
+      <body className={cn(gothamFont.className, "flex min-h-screen flex-col")}>
+        <NavBar className="my-10 bg-slate-500" />
+        {children}
+        <Footer className="mt-auto bg-slate-500" />
+      </body>
     </html>
   );
 }
