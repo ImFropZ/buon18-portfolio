@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(gothamFont.className, "flex min-h-screen flex-col")}>
-        <NavBar className="my-10 bg-slate-500" />
+        <NavBar className="my-10" />
         {children}
         <Footer className="mt-auto bg-slate-500" />
       </body>
