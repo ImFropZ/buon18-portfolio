@@ -16,7 +16,7 @@ export function ServiceCard() {
         <ServicePoint state={false} text="Unlimited access to all features" />
       </div>
 
-      <Button className="bg-primary hover:bg-primary mt-auto w-full rounded-lg py-2 text-gray-50 outline-none">
+      <Button className="mt-auto w-full rounded-lg bg-primary py-2 text-gray-50 outline-none hover:bg-primary">
         Contact Us
       </Button>
     </div>

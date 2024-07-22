@@ -8,7 +8,10 @@ interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
 export function Title({ size, children, ...props }: TitleProps) {
   return React.createElement(
     `h${size || 1}`,
-    { ...props, className: cn("text-primary text-7xl font-black", props.className) },
+    {
+      ...props,
+      className: cn("text-primary text-7xl font-black", props.className),
+    },
     children,
   );
 }

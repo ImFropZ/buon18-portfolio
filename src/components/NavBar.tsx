@@ -17,11 +17,11 @@ export function NavBar({ ...props }: NavBarProps) {
               alt="logo"
             ></Image>
           </div>
-          <p className="text-primary text-xl font-black">Buon18</p>
+          <p className="text-xl font-black text-primary">Buon18</p>
         </div>
         <div className="flex gap-5">
           <span>(555) 555-1234</span>
-          <span className="text-primary cursor-pointer select-none">
+          <span className="cursor-pointer select-none text-primary">
             Contact Us
           </span>
         </div>
