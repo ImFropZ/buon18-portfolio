@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export function About() {
   return (
-    <div className="my-10">
+    <section className="my-10">
       <Title className="my-10 text-center">About</Title>
       <div className="grid grid-cols-2">
         <div className="flex flex-col">
@@ -35,6 +35,6 @@ export function About() {
           ></Image>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

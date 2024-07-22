@@ -6,7 +6,7 @@ interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function Hero({ ...props }: HeroProps) {
   return (
-    <div
+    <section
       {...props}
       className={cn(
         "relative h-[32rem] w-full bg-slate-400 outline",
@@ -36,6 +36,6 @@ export function Hero({ ...props }: HeroProps) {
         <span>Scroll to</span>
         <ArrowDownRight />
       </button>
-    </div>
+    </section>
   );
 }
