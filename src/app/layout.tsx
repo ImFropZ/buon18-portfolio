@@ -44,6 +44,16 @@ const gothamFont = localFont({
       weight: "100",
       style: "italic",
     },
+    {
+      path: "../assets/fonts/Gotham-Black.otf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Gotham-BlackItalic.otf",
+      weight: "900",
+      style: "italic",
+    },
   ],
 });
 

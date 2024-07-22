@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <main className="mx-auto w-[90%] max-w-[64rem]">
+      <main className="mx-auto w-[90%] max-w-[82rem]">
         <About />
         <Service />
         <Blog />
