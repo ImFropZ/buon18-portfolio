@@ -23,16 +23,16 @@ export function Jumpbotron() {
           </Button>
         </div>
       </div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/wCUtvcEJuf0?si=U7nhpHWfDrz1swPN"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-        className="rounded-xl shadow-lg"
-      ></iframe>
+      <div className="relative aspect-video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/wCUtvcEJuf0?si=U7nhpHWfDrz1swPN"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="rounded-xl shadow-lg absolute h-full w-full"
+        ></iframe>
+      </div>
     </section>
   );
 }
