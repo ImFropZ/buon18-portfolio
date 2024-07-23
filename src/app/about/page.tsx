@@ -5,7 +5,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div>
+    <>
       <div className="bg-gradient-to-r from-[#6CF] to-[#06C] pb-[7rem] pt-[2.75rem]">
         <Title className="text-center text-gray-50">About Buon18</Title>
         <p className="mx-auto mt-12 w-[90%] max-w-[95ch] text-center text-lg text-gray-50">
@@ -75,6 +75,6 @@ export default function About() {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 }
