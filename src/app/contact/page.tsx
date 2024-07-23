@@ -1,4 +1,4 @@
-import { InputFormField, TextareaFormField } from "@/components";
+import { ContactForm, InputFormField, TextareaFormField } from "@/components";
 import { Button, Title } from "@/components/base";
 import { Send } from "lucide-react";
 import Image from "next/image";
@@ -50,16 +50,7 @@ export default function Contact() {
       </div>
       <div>
         <Title className="text-5xl text-gray-900">Contact</Title>
-        <form className="flex flex-col gap-2 py-4">
-          <InputFormField label="Name" />
-          <InputFormField label="Email" />
-          <InputFormField label="Subject" />
-          <TextareaFormField label="Message" />
-          <Button className="relative rounded-lg bg-primary p-3 text-gray-50">
-            <span>Send</span>
-            <Send className="absolute right-4 top-1/2 -translate-y-1/2" />
-          </Button>
-        </form>
+        <ContactForm className="flex flex-col gap-2 py-4" />
       </div>
     </div>
   );
