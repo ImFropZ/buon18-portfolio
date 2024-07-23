@@ -6,7 +6,9 @@ export function Jumpbotron() {
   return (
     <section className="my-20 grid grid-cols-2 gap-10">
       <div className="flex flex-col gap-5">
-        <Title className="text-6xl">We invest in the world&apos;s potential</Title>
+        <Title className="text-6xl">
+          We invest in the world&apos;s potential
+        </Title>
         <p className="text-gray-500">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
           eum aliquam provident excepturi nostrum nesciunt
@@ -21,18 +23,16 @@ export function Jumpbotron() {
           </Button>
         </div>
       </div>
-      <div>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/wCUtvcEJuf0?si=U7nhpHWfDrz1swPN"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-          className="rounded-xl"
-        ></iframe>
-      </div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/wCUtvcEJuf0?si=U7nhpHWfDrz1swPN"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+        className="rounded-xl shadow-lg"
+      ></iframe>
     </section>
   );
 }
