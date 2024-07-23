@@ -1,5 +1,6 @@
-import Image from "next/image";
+import { Menu } from "@/components";
 import { cn } from "./utils";
+import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
@@ -32,17 +33,7 @@ export function NavBar({ ...props }: NavBarProps) {
         </div>
       </div>
       <nav className="bg-gray-50">
-        <ul className="flex gap-8 p-3 px-7">
-          <Link href="/services">
-            <li className="cursor-pointer select-none">Services</li>
-          </Link>
-          <Link href="/blogs">
-            <li className="cursor-pointer select-none">Blogs</li>
-          </Link>
-          <Link href="/about">
-            <li className="cursor-pointer select-none">About</li>
-          </Link>
-        </ul>
+        <Menu />
       </nav>
     </div>
   );
