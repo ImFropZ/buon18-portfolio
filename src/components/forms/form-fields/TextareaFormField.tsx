@@ -36,3 +36,5 @@ export const TextareaFormField = React.forwardRef<
     </div>
   );
 });
+
+TextareaFormField.displayName = "TextareaFormField";

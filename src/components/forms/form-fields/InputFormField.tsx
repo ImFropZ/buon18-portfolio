@@ -34,3 +34,5 @@ export const InputFormField = React.forwardRef<
     </div>
   );
 });
+
+InputFormField.displayName = "InputFormField";

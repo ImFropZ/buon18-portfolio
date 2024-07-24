@@ -28,7 +28,7 @@ export function About() {
         </div>
         <div className="grid place-content-center">
           <Image
-            src="/assets/Logo_Icon-01.png"
+            src="/assets/buon18-logo-icon.png"
             width={500}
             height={500}
             alt="about us image"

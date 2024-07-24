@@ -16,7 +16,7 @@ export function NavBar({ ...props }: NavBarProps) {
               <Image
                 width={64}
                 height={64}
-                src="/assets/Logo_Icon-01.png"
+                src="/assets/buon18-logo-icon.png"
                 alt="logo"
               ></Image>
             </div>

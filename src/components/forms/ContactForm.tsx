@@ -6,13 +6,22 @@ import { cn } from "@/components/utils";
 import { Send } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import React from "react";
 import { contactSchema } from "@/models";
+import { render } from "@react-email/components";
+import { ContactTemplate } from "@/components/email";
+import React from "react";
+import * as z from "zod";
 
-function onSend() {
-  alert("Message sent!");
-
-  return Promise.resolve();
+async function onSend(data: z.infer<typeof contactSchema>) {
+  return await fetch("/api/send-mail", {
+    method: "POST",
+    body: JSON.stringify({
+      from: "Buon18 Portfolio",
+      to: (process.env.NEXT_PUBLIC_RECEIVER_EMAILS || "").split(","),
+      subject: data.subject,
+      html: render(ContactTemplate({ ...data })),
+    }),
+  });
 }
 
 interface ContactFormProps extends React.FormHTMLAttributes<HTMLFormElement> {}
@@ -32,8 +41,8 @@ export function ContactForm({ ...props }: ContactFormProps) {
     <form
       {...props}
       className={cn(props.className)}
-      onSubmit={form.handleSubmit(() => {
-        onSend().then(() => {
+      onSubmit={form.handleSubmit((data) => {
+        onSend(data).then(() => {
           console.log("Message sent!");
           form.reset();
         });
