@@ -34,7 +34,7 @@ export function ContactTemplate({
           <Container className="mx-auto my-[40px] max-w-[465px] rounded border border-solid border-[#eaeaea] p-[20px]">
             <Section className="mt-[32px]">
               <Img
-                src={`https://buon18.com/assets/buon18-logo.png`}
+                src={`https://buon18.com/assets/buon18-logo-icon.png`}
                 width="40"
                 height="37"
                 alt="Buon18"

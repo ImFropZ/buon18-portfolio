@@ -101,9 +101,6 @@ export function ContactForm({ ...props }: ContactFormProps) {
           );
         }}
       />
-      {/* <InputFormField label="Name" {...form.register("name")} />
-      <InputFormField label="Email" {...form.register("email")} />
-      <InputFormField label="Subject" {...form.register("subject")} /> */}
       <Button className="relative rounded-lg bg-primary p-3 text-gray-50">
         <span>Send</span>
         <Send className="absolute right-4 top-1/2 -translate-y-1/2" />
