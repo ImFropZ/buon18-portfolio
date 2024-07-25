@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Buon18 Portfolio",
   description: "",
   verification: {
-    google: "lQsJ4IooYccDCEHTdM3S_0SohTmEfwknCtd842uECPg",
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIIFICATION,
   },
   icons: {
     icon: "/favicon.ico",
