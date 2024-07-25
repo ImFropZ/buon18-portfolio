@@ -5,8 +5,8 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="mx-auto mb-10 grid w-[90%] max-w-[82rem] grid-cols-2 gap-4">
-      <div>
+    <div className="mx-auto mb-10 flex w-[90%] max-w-[82rem] flex-wrap gap-4 gap-y-10">
+      <div className="flex-1">
         <Title className="text-5xl text-gray-900">Information</Title>
         <p className="my-4 text-lg text-gray-500">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
@@ -47,7 +47,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-      <div>
+      <div className="w-full md:flex-1">
         <Title className="text-5xl text-gray-900">Contact</Title>
         <ContactForm className="flex flex-col gap-2 py-4" />
       </div>
