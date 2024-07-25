@@ -1,4 +1,4 @@
-import { Title, Button } from "@/components/base";
+import { Title } from "@/components/base";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
