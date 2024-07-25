@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="mx-auto mb-10 flex w-[90%] max-w-[82rem] flex-wrap gap-4 gap-y-10">
+    <div className="mx-auto mb-10 md:mt-5 flex w-[90%] max-w-[82rem] flex-wrap gap-4 gap-y-10">
       <div className="flex-1">
         <Title className="text-5xl text-gray-900">Information</Title>
         <p className="my-4 text-lg text-gray-500">

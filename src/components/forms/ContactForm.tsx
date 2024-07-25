@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema } from "@/models";
 import { render } from "@react-email/components";
 import { ContactTemplate } from "@/components/email";
+import { toast } from "react-toastify";
 import React from "react";
 import * as z from "zod";
 
@@ -27,6 +28,8 @@ async function onSend(data: z.infer<typeof contactSchema>) {
 interface ContactFormProps extends React.FormHTMLAttributes<HTMLFormElement> {}
 
 export function ContactForm({ ...props }: ContactFormProps) {
+  const [buttonDisable, setButtonDisable] = React.useState(false);
+
   const form = useForm({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -42,10 +45,19 @@ export function ContactForm({ ...props }: ContactFormProps) {
       {...props}
       className={cn(props.className)}
       onSubmit={form.handleSubmit((data) => {
-        onSend(data).then(() => {
-          console.log("Message sent!");
-          form.reset();
-        });
+        toast
+          .promise(onSend(data), {
+            pending: "Sending...",
+            success: "Email sent successfully! We'll get back to you soon.",
+            error:
+              "Failed to send email! Please contact us using other method.",
+          })
+          .then(() => {
+            form.reset();
+          })
+          .finally(() => {
+            setButtonDisable(false);
+          });
       }, console.log)}
     >
       <Controller
@@ -101,7 +113,10 @@ export function ContactForm({ ...props }: ContactFormProps) {
           );
         }}
       />
-      <Button className="relative rounded-lg bg-primary p-3 text-gray-50">
+      <Button
+        className="relative rounded-lg bg-primary p-3 text-gray-50"
+        disabled={buttonDisable}
+      >
         <span>Send</span>
         <Send className="absolute right-4 top-1/2 -translate-y-1/2" />
       </Button>
