@@ -1,9 +1,18 @@
 import { Package } from "lucide-react";
 import { Button, Title } from "@/components/base";
+import { cn } from "@/components/utils";
 
-export function WorkCard() {
+interface WorkCardProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+export function WorkCard({ className, ...props }: WorkCardProps) {
   return (
-    <div className="relative grid overflow-hidden rounded-lg shadow">
+    <div
+      {...props}
+      className={cn(
+        "relative grid overflow-hidden rounded-lg shadow",
+        className,
+      )}
+    >
       <div className="relative max-h-40">
         <img
           src="https://placehold.co/50"
