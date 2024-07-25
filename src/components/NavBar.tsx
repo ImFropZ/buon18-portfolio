@@ -20,7 +20,9 @@ export function NavBar({ ...props }: NavBarProps) {
                 alt="logo"
               ></Image>
             </div>
-            <p className="text-xl font-black text-primary">Buon18</p>
+            <p className="hidden text-xl font-black text-primary lg:block">
+              Buon18
+            </p>
           </div>
         </Link>
         <div className="flex gap-5">
