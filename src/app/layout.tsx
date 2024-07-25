@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Buon18 Portfolio",
   description: "",
+  verification: {
+    google: "lQsJ4IooYccDCEHTdM3S_0SohTmEfwknCtd842uECPg",
+  },
   icons: {
     icon: "/favicon.ico",
   },
