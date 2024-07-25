@@ -12,6 +12,10 @@ const config: Config = {
       colors: {
         primary: "#06C",
       },
+      fontFamily: {
+        primary: ["Hanuman", "Gotham", "sans-serif"],
+        test: ["Gotham", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -19,6 +23,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

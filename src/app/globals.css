@@ -15,3 +15,132 @@
     --background-end-rgb: 0, 102, 204;
   }
 }
+
+/* Font Gotham */
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-BookItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Font Hanuman */
+
+/* khmer */
+@font-face {
+  font-family: "Hanuman";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJzdNvD15HhpJJBQMLtMKljWRo.woff2)
+    format("woff2");
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+}
+
+/* khmer */
+@font-face {
+  font-family: "Hanuman";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJ0dNvD15HhpJJBQAr_LIVGZCNc.woff2)
+    format("woff2");
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+}
+
+/* khmer */
+@font-face {
+  font-family: "Hanuman";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJxdNvD15HhpJJBSKrdObFn.woff2)
+    format("woff2");
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+}
+
+/* khmer */
+@font-face {
+  font-family: "Hanuman";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJ0dNvD15HhpJJBQBr4LIVGZCNc.woff2)
+    format("woff2");
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+}
+
+/* khmer */
+@font-face {
+  font-family: "Hanuman";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJ0dNvD15HhpJJBQCL6LIVGZCNc.woff2)
+    format("woff2");
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+}

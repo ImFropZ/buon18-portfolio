@@ -30,7 +30,7 @@ export function Jumpbotron() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="rounded-xl shadow-lg absolute h-full w-full"
+          className="absolute h-full w-full rounded-xl shadow-lg"
         ></iframe>
       </div>
     </section>

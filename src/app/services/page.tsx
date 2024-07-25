@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <div className="mx-auto w-[90%] max-w-[82rem] pb-10">
       <Title className="text-center">Services</Title>
-      <div className="grid auto-rows-[35rem] grid-cols-3 gap-10 my-10">
+      <div className="my-10 grid auto-rows-[35rem] grid-cols-3 gap-10">
         <ServiceCard />
         <ServiceCard />
         <ServiceCard />
