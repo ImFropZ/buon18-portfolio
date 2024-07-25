@@ -24,7 +24,7 @@ export function BlogCard({
     <div
       {...props}
       className={cn(
-        "grid grid-rows-[auto,1fr] overflow-hidden rounded-lg shadow",
+        "grid grid-rows-[auto,1fr] overflow-hidden rounded-lg border",
         className,
       )}
     >

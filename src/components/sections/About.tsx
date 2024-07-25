@@ -1,37 +1,42 @@
-import Image from "next/image";
-import React from "react";
 import { Title, Button } from "@/components/base";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export function About() {
   return (
     <section className="my-10">
       <Title className="my-10 text-center">About</Title>
-      <div className="grid grid-cols-2">
-        <div className="flex flex-col">
+      <div className="flex flex-col-reverse gap-10 md:flex-row">
+        <div className="flex flex-1 flex-col flex-wrap">
           <Title
             size={2}
             className="overflow-clip text-nowrap text-4xl text-gray-900"
           >
             We are passion
           </Title>
-          <p>
+          <p className="mb-5 mt-2 text-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
             adipisci aperiam exercitationem? Eius, necessitatibus ad? Eos enim
             cum perspiciatis repellendus commodi tempore, minus nihil id rem
             quod, eius eveniet aliquid.
           </p>
-          <Button type="button" className="mt-auto flex justify-center gap-5">
+          <Link
+            href="/about"
+            className="mt-auto flex w-full justify-center gap-5 border py-2 rounded-lg hover:bg-gray-100"
+          >
             <span>See more</span>
             <ArrowRight />
-          </Button>
+          </Link>
         </div>
-        <div className="grid place-content-center">
+        <div className="grid place-content-center md:flex-1">
           <Image
-            src="/assets/buon18-logo-icon.png"
+            src="/images/handshake.jpg"
             width={500}
             height={500}
             alt="about us image"
+            className="rounded-lg shadow-lg"
           ></Image>
         </div>
       </div>

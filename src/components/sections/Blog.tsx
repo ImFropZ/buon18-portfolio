@@ -8,18 +8,25 @@ const LESS_BLOGS = BLOGS.slice(0, 3);
 export function Blog() {
   return (
     <section className="my-10">
-      <Title className="my-10 text-center">Blogs</Title>
-      <div className="grid grid-cols-3 gap-20">
-        {LESS_BLOGS &&
+      <Title className="mt-10 text-center md:mb-10">Blogs</Title>
+      {/* NOTE: Mobile View only */}
+      <p className="my-5 text-center text-sm text-gray-500 md:hidden">
+        Scroll to the right for more info
+      </p>
+      <div className="relative flex w-full snap-x snap-mandatory gap-20 overflow-x-auto md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-3">
+        {/* TODO: Remove this in production */}
+        {Array.from({ length: 3 }).map(() =>
           LESS_BLOGS.map((blog) => {
             return (
               <BlogCard
                 key={blog.code}
                 {...blog}
                 href={`/blogs/${blog.code}`}
+                className="relative min-w-full snap-start"
               />
             );
-          })}
+          }),
+        )}
       </div>
     </section>
   );

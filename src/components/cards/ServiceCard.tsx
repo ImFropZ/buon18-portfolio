@@ -22,7 +22,7 @@ export function ServiceCard({
   return (
     <div
       {...props}
-      className={cn("flex flex-col rounded border p-5 shadow", className)}
+      className={cn("flex flex-col rounded border p-5", className)}
     >
       <p className="text-xl text-gray-500">{name}</p>
       <Title size={2} className="my-2 text-5xl text-gray-900">
