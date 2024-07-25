@@ -1,24 +1,57 @@
-import React from "react";
 import { Button, Title } from "@/components/base";
 import { CheckCircle2 } from "lucide-react";
 import { cn } from "../utils";
+import React from "react";
+import { Service } from "@/data";
+import Link from "next/link";
 
-export function ServiceCard() {
+interface ServiceCardProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    Service {}
+
+export function ServiceCard({
+  type,
+  name,
+  description,
+  price,
+  availableServices,
+  unavailableServices,
+  className,
+  ...props
+}: ServiceCardProps) {
   return (
-    <div className="flex flex-col rounded border p-5 shadow">
-      <p className="text-xl text-gray-500">Standard plan</p>
+    <div
+      {...props}
+      className={cn("flex flex-col rounded border p-5 shadow", className)}
+    >
+      <p className="text-xl text-gray-500">{name}</p>
       <Title size={2} className="my-2 text-5xl text-gray-900">
-        $49<span className="text-xl font-normal text-gray-500">/month</span>
+        ${price}
+        <span
+          className="text-xl font-normal text-gray-500"
+          hidden={type !== "MONTHLY"}
+        >
+          /month
+        </span>
       </Title>
-      <div className="flex flex-col gap-2">
-        <ServicePoint state={true} text="Design" />
-        <ServicePoint state={true} text="Website" />
-        <ServicePoint state={false} text="Unlimited access to all features" />
+      <p className="mb-5 text-gray-500">{description}</p>
+      <div className="flex flex-col gap-2 pb-10">
+        {availableServices.map((service) => (
+          <ServicePoint key={service.label} state={true} text={service.label} />
+        ))}
+        {unavailableServices.map((service) => (
+          <ServicePoint
+            key={service.label}
+            state={false}
+            text={service.label}
+          />
+        ))}
       </div>
-
-      <Button className="mt-auto w-full rounded-lg bg-primary py-2 text-gray-50 outline-none hover:bg-primary">
-        Contact Us
-      </Button>
+      <Link href="/contact">
+        <Button className="mt-auto w-full rounded-lg bg-primary py-2 text-gray-50 outline-none hover:bg-primary">
+          Contact Us
+        </Button>
+      </Link>
     </div>
   );
 }
