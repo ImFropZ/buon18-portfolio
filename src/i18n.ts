@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { DEFAULT_LANGUAGE, LANGUAGES } from "@/data";
 
 export default getRequestConfig(async function () {
-  const cookiesLocale = cookies().get("NEXT_LOCALE")?.value || "km";
+  const cookiesLocale = cookies().get("NEXT_LOCALE")?.value || "en";
   const locale = match(LANGUAGES, [cookiesLocale], DEFAULT_LANGUAGE);
   return {
     locale,
