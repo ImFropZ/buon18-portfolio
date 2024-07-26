@@ -1,13 +1,16 @@
 import { WorkCard } from "@/components";
 import { Title } from "@/components/base";
 import { Dot } from "lucide-react";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function About() {
+  const t = useTranslations();
+
   return (
     <>
       <div className="bg-gradient-to-r from-[#6CF] to-[#06C] pb-[7rem] pt-[2.75rem]">
-        <Title className="text-center text-gray-50">About Buon18</Title>
+        <Title className="text-center text-gray-50">{t("about")} {t("buon18")}</Title>
         <p className="mx-auto mt-12 w-[90%] max-w-[95ch] text-center text-lg text-gray-50">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
           delectus consequuntur adipisci reiciendis ut pariatur cumque sint at.

@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const MENUS = [
   {
@@ -20,6 +21,7 @@ const MENUS = [
 ];
 
 export function Menu() {
+  const t = useTranslations();
   const pathname = usePathname();
 
   return (
@@ -34,7 +36,7 @@ export function Menu() {
                 .toLowerCase()
                 .includes(menu.label.toLowerCase())}
             >
-              {menu.label}
+              {t(menu.label.toLowerCase())}
             </li>
           </Link>
         );

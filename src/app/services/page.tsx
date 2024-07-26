@@ -1,12 +1,15 @@
 import { ServiceCard } from "@/components";
 import { Title } from "@/components/base";
 import { SERVICES } from "@/data";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function Services() {
+  const t = useTranslations();
+
   return (
     <div className="mx-auto w-[90%] max-w-[82rem] pb-10">
-      <Title className="text-center">Services</Title>
+      <Title className="text-center">{t("services")}</Title>
       <div className="wrap mx-auto my-10 flex flex-wrap gap-10">
         {Array.from({ length: 4 }).map(() =>
           SERVICES.map((service) => (

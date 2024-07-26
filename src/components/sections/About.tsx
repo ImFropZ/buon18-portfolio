@@ -1,13 +1,16 @@
 import { Title } from "@/components/base";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export function About() {
+  const t = useTranslations();
+
   return (
     <section className="my-10">
-      <Title className="my-10 text-center">About</Title>
+      <Title className="my-10 text-center">{t("about")}</Title>
       <div className="flex flex-col-reverse gap-10 md:flex-row">
         <div className="flex flex-1 flex-col flex-wrap">
           <Title
@@ -24,7 +27,7 @@ export function About() {
           </p>
           <Link
             href="/about"
-            className="mt-auto flex w-full justify-center gap-5 border py-2 rounded-lg hover:bg-gray-100"
+            className="mt-auto flex w-full justify-center gap-5 rounded-lg border py-2 hover:bg-gray-100"
           >
             <span>See more</span>
             <ArrowRight />
