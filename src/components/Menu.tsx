@@ -25,22 +25,21 @@ export function Menu() {
   const pathname = usePathname();
 
   return (
-    <ul className="flex gap-8 p-3 px-7">
+    <nav className="flex gap-8 p-3 px-7 bg-gray-100">
       {MENUS.map((menu) => {
         return (
-          <Link href={menu.link} key={menu.link}>
-            <li
-              key={menu.label}
-              className="cursor-pointer select-none data-[active=true]:font-bold"
-              data-active={pathname
-                .toLowerCase()
-                .includes(menu.label.toLowerCase())}
-            >
-              {t(menu.label.toLowerCase())}
-            </li>
+          <Link
+            href={menu.link}
+            key={menu.link}
+            className="cursor-pointer select-none data-[active=true]:font-bold"
+            data-active={pathname
+              .toLowerCase()
+              .includes(menu.label.toLowerCase())}
+          >
+            {t(menu.label.toLowerCase())}
           </Link>
         );
       })}
-    </ul>
+    </nav>
   );
 }

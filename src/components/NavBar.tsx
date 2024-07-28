@@ -41,9 +41,7 @@ export function NavBar({ ...props }: NavBarProps) {
           </Link>
         </div>
       </div>
-      <nav className="bg-gray-50">
-        <Menu />
-      </nav>
+      <Menu />
     </div>
   );
 }
