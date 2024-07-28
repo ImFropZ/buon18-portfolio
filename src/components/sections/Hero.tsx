@@ -12,7 +12,7 @@ export function Hero({ ...props }: HeroProps) {
     <section
       {...props}
       className={cn(
-        "relative grid h-[40rem] w-full place-content-center bg-[url(/images/hero-background.jpg)] bg-cover bg-top bg-no-repeat",
+        "relative grid w-full place-content-center overflow-hidden bg-gradient-to-br from-primary-light to-primary py-40",
         props.className,
       )}
     >
@@ -23,11 +23,16 @@ export function Hero({ ...props }: HeroProps) {
 
       <Button
         type="button"
-        className="hover:bg-primary-dark mx-auto mt-10 flex w-1/2 justify-center gap-5 bg-primary font-bold text-gray-50"
+        className="mx-auto mt-10 flex w-1/2 justify-center gap-5 bg-primary font-bold text-gray-50 hover:bg-primary-dark"
         onClick={() => {
-          document
-            .getElementById("about-section")
-            ?.scrollIntoView({ behavior: "smooth" });
+          const aboutSectionTopPosition =
+            document.getElementById("about-section")?.getBoundingClientRect()
+              .top ?? 0;
+
+          window.scrollTo({
+            top: aboutSectionTopPosition - 30,
+            behavior: "smooth",
+          });
         }}
       >
         <span>Scroll down</span>

@@ -12,7 +12,9 @@ const config: Config = {
       colors: {
         primary: "#06C",
         "primary-dark": "#005cb8",
+        "primary-light": "#6CF",
       },
+
       fontFamily: {
         primary: ["Hanuman", "Gotham", "sans-serif"],
       },

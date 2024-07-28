@@ -1,4 +1,4 @@
-import { NavBar, ToTheTopButton } from "@/components";
+import { NavBar, ScrollToTop } from "@/components";
 import type { Metadata } from "next";
 import { Bounce, ToastContainer } from "react-toastify";
 import { getLocale, getMessages } from "next-intl/server";
@@ -40,7 +40,7 @@ export default async function RootLayout({
             transition={Bounce}
           />
         </NextIntlClientProvider>
-        <ToTheTopButton className="ml-auto mr-10" />
+        <ScrollToTop />
       </body>
     </html>
   );

@@ -9,8 +9,10 @@ export default function About() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-[#6CF] to-[#06C] pb-[7rem] pt-[2.75rem]">
-        <Title className="text-center text-gray-50">{t("about")} {t("buon18")}</Title>
+      <div className="from-primary-light bg-gradient-to-r to-primary pb-[7rem] pt-[2.75rem]">
+        <Title className="text-center text-gray-50">
+          {t("about")} {t("buon18")}
+        </Title>
         <p className="mx-auto mt-12 w-[90%] max-w-[95ch] text-center text-lg text-gray-50">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
           delectus consequuntur adipisci reiciendis ut pariatur cumque sint at.
@@ -41,7 +43,7 @@ export default function About() {
           </Title>
           <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-4">
             {Array.from({ length: 7 }).map((_, i) => (
-              <WorkCard key={i} className="relative min-w-full snap-start"/>
+              <WorkCard key={i} className="relative min-w-full snap-start" />
             ))}
           </div>
         </div>
