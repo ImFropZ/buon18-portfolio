@@ -41,6 +41,10 @@ export default function About() {
           <Title size={2} className="mb-5 text-4xl text-gray-900">
             Our Works
           </Title>
+          {/* NOTE: Mobile View only */}
+          <p className="my-5 text-center text-sm text-gray-500 md:hidden">
+            Scroll to the right for more info
+          </p>
           <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-4">
             {Array.from({ length: 7 }).map((_, i) => (
               <WorkCard key={i} className="relative min-w-full snap-start" />

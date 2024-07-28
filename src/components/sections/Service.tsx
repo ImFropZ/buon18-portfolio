@@ -14,16 +14,13 @@ export function Service() {
         Scroll to the right for more info
       </p>
       <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-3">
-        {/* TODO: Remove this in production */}
-        {Array.from({ length: 3 }).map(() =>
-          LESS_SERVICES.map((service) => (
-            <ServiceCard
-              key={service.name}
-              {...service}
-              className="relative min-w-full snap-start"
-            />
-          )),
-        )}
+        {LESS_SERVICES.map((service) => (
+          <ServiceCard
+            key={service.name}
+            {...service}
+            className="relative min-w-full snap-start"
+          />
+        ))}
       </div>
     </section>
   );

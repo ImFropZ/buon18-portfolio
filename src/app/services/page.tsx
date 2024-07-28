@@ -11,15 +11,13 @@ export default function Services() {
     <div className="mx-auto w-[90%] max-w-[82rem] pb-10">
       <Title className="text-center">{t("services")}</Title>
       <div className="wrap mx-auto my-10 flex flex-wrap gap-10">
-        {Array.from({ length: 4 }).map(() =>
-          SERVICES.map((service) => (
-            <ServiceCard
-              key={service.name}
-              {...service}
-              className="flex-1 basis-80"
-            />
-          )),
-        )}
+        {SERVICES.map((service) => (
+          <ServiceCard
+            key={service.name}
+            {...service}
+            className="flex-1 basis-80"
+          />
+        ))}
       </div>
       <p className="text-gray-500">
         * Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente
