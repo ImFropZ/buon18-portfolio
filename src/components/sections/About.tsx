@@ -9,7 +9,7 @@ export function About() {
   const t = useTranslations();
 
   return (
-    <section className="my-10">
+    <section className="my-10" id="about-section">
       <Title className="my-10 text-center">{t("about")}</Title>
       <div className="flex flex-col-reverse gap-10 md:flex-row">
         <div className="flex flex-1 flex-col flex-wrap">

@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../utils";
+import { cn } from "@/components/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 

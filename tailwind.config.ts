@@ -11,10 +11,10 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#06C",
+        "primary-dark": "#005cb8",
       },
       fontFamily: {
         primary: ["Hanuman", "Gotham", "sans-serif"],
-        test: ["Gotham", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
