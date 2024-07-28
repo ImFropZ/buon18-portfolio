@@ -40,6 +40,9 @@ export function About() {
             height={500}
             alt="about us image"
             className="rounded-lg shadow-lg"
+            priority={false}
+            placeholder="blur"
+            blurDataURL="/images/handshake-blur.png"
           ></Image>
         </div>
       </div>
