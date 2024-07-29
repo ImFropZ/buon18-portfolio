@@ -27,6 +27,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <link rel="preload" href="/images/handshake-blur.png" as="image" />
       <body className="flex min-h-screen flex-col font-primary">
         <NextIntlClientProvider messages={messages}>
           <NavBar />
