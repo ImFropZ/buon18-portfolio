@@ -12,27 +12,29 @@ export function NavBar({ ...props }: NavBarProps) {
   const t = useTranslations();
 
   return (
-    <div {...props} className={cn("flex w-full flex-col p-2", props.className)}>
-      <div className="flex justify-end p-5">
-        <LocaleButtons />
-      </div>
-      <div className="flex items-center justify-between px-5 py-2">
-        <Link href="/">
+    <div
+      {...props}
+      className={cn(
+        "relative flex w-full flex-col overflow-hidden p-4 after:absolute after:left-1/2 after:top-[calc(100%-1rem)] after:h-24 after:w-1/2 after:-translate-x-1/2 after:content-normal after:rounded-3xl after:bg-[#042782]",
+        props.className,
+      )}
+    >
+      <LocaleButtons />
+      <div className="flex items-center justify-between px-20 py-2">
+        <Link href="/" className="flex-1">
           <div className="flex items-center gap-2">
-            <div className="h-14 w-14">
+            <div className="h-full">
               <Image
-                width={64}
+                width={128}
                 height={64}
-                src="/assets/buon18-logo-icon.png"
+                src="/assets/buon18-logo.png"
                 alt="logo"
               ></Image>
             </div>
-            <p className="hidden text-xl font-black text-primary lg:block">
-              Buon18
-            </p>
           </div>
         </Link>
-        <div className="flex justify-end gap-5">
+        <Menu />
+        <div className="flex flex-1 justify-end gap-10 font-medium leading-5 pr-12">
           <span>(555) 555-1234</span>
           <Link href="/contact">
             <span className="cursor-pointer select-none text-primary">
@@ -41,7 +43,6 @@ export function NavBar({ ...props }: NavBarProps) {
           </Link>
         </div>
       </div>
-      <Menu />
     </div>
   );
 }

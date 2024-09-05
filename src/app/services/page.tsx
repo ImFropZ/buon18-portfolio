@@ -9,7 +9,7 @@ export default function Services() {
 
   return (
     <div className="mx-auto w-[90%] max-w-[82rem] pb-10">
-      <Title className="text-center">{t("services")}</Title>
+      <Title className="text-center">{t("service")}</Title>
       <div className="wrap mx-auto my-10 flex flex-wrap gap-10">
         {SERVICES.map((service) => (
           <ServiceCard
