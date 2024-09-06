@@ -1,8 +1,22 @@
 {
+  "undefined": "Undefined",
   "buon18": "Buon18",
-  "home": "Home",
-  "about": "About Us",
-  "contact": "Contact Us",
-  "service": "Our Service",
-  "blogs": "Blogs"
+  "home": {
+    "nav": "Home"
+  },
+  "about": {
+    "nav": "About Us",
+    "who-are-we": "Who are we?"
+  },
+  "contact": {
+    "nav": "Contact Us"
+  },
+  "service": {
+    "nav": "Our Service"
+  },
+  "blogs": {
+    "nav": "Blogs",
+    "title": "Blogs",
+    "lastest": "Our Lastest Blogs"
+  }
 }

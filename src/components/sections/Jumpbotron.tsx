@@ -18,11 +18,11 @@ export function Jumpbotron() {
           <Link href="/contact">
             <Button className="flex gap-2 rounded-lg bg-primary px-5 py-3 text-gray-50 outline-none hover:bg-primary">
               <span>Get started</span>
-              <ArrowRight strokeWidth={4} />
+              <ArrowRight />
             </Button>
           </Link>
           <Link href="/about">
-            <Button className="flex gap-2 rounded-lg px-5 py-3 text-gray-800 outline">
+            <Button className="flex gap-2 rounded-lg px-5 py-3 text-black border border-gray-200">
               <span>Learn more</span>
             </Button>
           </Link>

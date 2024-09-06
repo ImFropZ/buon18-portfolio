@@ -38,7 +38,7 @@ export function NavBar({ ...props }: NavBarProps) {
           <span>(555) 555-1234</span>
           <Link href="/contact">
             <span className="cursor-pointer select-none text-primary">
-              {t("contact")}
+              {t("contact.nav")}
             </span>
           </Link>
         </div>
