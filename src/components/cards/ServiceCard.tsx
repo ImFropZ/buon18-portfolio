@@ -19,7 +19,6 @@ export function ServiceCard({
   className,
   ...props
 }: ServiceCardProps) {
-  console.log(price)
   return (
     <div
       {...props}

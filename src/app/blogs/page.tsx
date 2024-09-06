@@ -1,15 +1,12 @@
 import { BlogCard } from "@/components";
 import { Title } from "@/components/base";
 import { BLOGS } from "@/data";
-import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function Blogs() {
-  const t = useTranslations();
-
   return (
     <div className="mx-auto w-[90%] max-w-[82rem] pb-10">
-      <Title className="text-center">{t("blogs")}</Title>
+      <Title className="text-center text-5xl my-6" translateKey="blogs.nav" />
       <div className="wrap mx-auto my-10 flex w-full flex-wrap gap-10">
         {BLOGS.map((blog) => {
           return (

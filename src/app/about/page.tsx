@@ -10,8 +10,8 @@ export default function About() {
   return (
     <>
       <div className="from-primary-light bg-gradient-to-r to-primary pb-[7rem] pt-[2.75rem]">
-        <Title className="text-center text-gray-50">
-          {t("about")} {t("buon18")}
+        <Title className="text-center text-gray-50 text-5xl">
+          {t("about.nav")} {t("buon18")}
         </Title>
         <p className="mx-auto mt-12 w-[90%] max-w-[95ch] text-center text-lg text-gray-50">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
