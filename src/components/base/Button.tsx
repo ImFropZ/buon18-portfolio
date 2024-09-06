@@ -8,7 +8,7 @@ export function Button({ children, ...props }: ButtonProps) {
     <button
       {...props}
       className={cn(
-        "rounded py-4 outline outline-[1px] transition-all hover:bg-gray-200",
+        "rounded transition-all",
         props.className,
       )}
     >
