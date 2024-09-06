@@ -10,7 +10,10 @@ export default function Contact() {
   return (
     <div className="mx-auto mb-10 flex w-[90%] max-w-[82rem] flex-wrap gap-4 gap-y-10 md:mt-5">
       <div className="flex-1">
-        <Title className="text-5xl text-gray-900">Information</Title>
+        <Title
+          className="text-5xl text-gray-900"
+          translateKey="contact.information"
+        />
         <p className="my-4 text-lg text-gray-500">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
           mollitia maxime nesciunt dicta voluptatum eos velit optio dolorem
@@ -23,7 +26,7 @@ export default function Contact() {
         <div className="mt-5 flex gap-8">
           <a href="https://www.facebook.com/buon18.kh" target="_blank">
             <Image
-              src="/images/facebook.svg"
+              src="/images/facebook-color.svg"
               alt="facebook"
               width={50}
               height={50}
@@ -34,7 +37,7 @@ export default function Contact() {
             target="_blank"
           >
             <Image
-              src="/images/youtube.svg"
+              src="/images/youtube-color.svg"
               alt="youtube"
               width={50}
               height={50}
@@ -42,7 +45,7 @@ export default function Contact() {
           </a>
           <a href="#" target="_blank">
             <Image
-              src="/images/tiktok.svg"
+              src="/images/tiktok-color.svg"
               alt="tiktok"
               width={50}
               height={50}
@@ -51,7 +54,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="w-full md:flex-1">
-        <Title className="text-5xl text-gray-900">{t("contact")}</Title>
+        <Title className="text-5xl text-gray-900" translateKey="contact.nav" />
         <ContactForm className="flex flex-col gap-2 py-4" />
       </div>
     </div>
