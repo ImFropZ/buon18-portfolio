@@ -7,19 +7,19 @@ import { useTranslations } from "next-intl";
 
 const MENUS = [
   {
-    label: "Home",
+    label: "home.nav",
     link: "/",
   },
   {
-    label: "About",
+    label: "about.nav",
     link: "/about",
   },
   {
-    label: "Blogs",
+    label: "blogs.nav",
     link: "/blogs",
   },
   {
-    label: "Service",
+    label: "service.nav",
     link: "/services",
   },
 ];

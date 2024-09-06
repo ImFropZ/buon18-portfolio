@@ -1,4 +1,4 @@
-import { NavBar, ScrollToTop } from "@/components";
+import { Footer, NavBar, ScrollToTop } from "@/components";
 import type { Metadata } from "next";
 import { Bounce, ToastContainer } from "react-toastify";
 import { getLocale, getMessages } from "next-intl/server";
@@ -27,13 +27,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <link rel="preload" href="/images/handshake-blur.png" as="image" />
+      <link rel="preload" href="/images/about-blur.jpg" as="image" />
       <body className="flex min-h-screen flex-col font-primary">
         <NextIntlClientProvider messages={messages}>
           <NavBar />
           {children}
-          {/* TODO: footer not implement */}
-          {/* <Footer className="mt-auto bg-slate-500" /> */}
+          <Footer className="mt-auto" />
           <ToastContainer
             position="top-center"
             autoClose={5000}

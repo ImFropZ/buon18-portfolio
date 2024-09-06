@@ -13,11 +13,9 @@ export function About() {
       <div className="flex flex-col-reverse gap-10 md:flex-row">
         <div className="flex flex-1 flex-col flex-wrap">
           <Title
-            size={1}
-            className="overflow-clip text-nowrap text-5xl font-extrabold text-[#1A56DB]"
-          >
-            Who are we?
-          </Title>
+            className="overflow-clip text-nowrap text-5xl font-extrabold leading-normal text-[#1A56DB]"
+            translateKey="about.who-are-we"
+          />
           <div className="my-10 text-lg text-gray-900">
             <p>
               Buon18 was established by a group of passionate students in 2022,

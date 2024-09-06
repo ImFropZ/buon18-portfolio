@@ -8,7 +8,10 @@ const LESS_SERVICES = SERVICES.slice(0, 3);
 export function Service() {
   return (
     <section className="my-10">
-      <Title className="mt-10 text-center md:mb-10">Services</Title>
+      <Title
+        className="mt-10 text-center text-5xl md:mb-10"
+        translateKey="service.nav"
+      />
       {/* NOTE: Mobile View only */}
       <p className="my-5 text-center text-sm text-gray-500 md:hidden">
         Scroll to the right for more info
