@@ -4,6 +4,7 @@ import { cn } from "../utils";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface BlogCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -20,6 +21,8 @@ export function BlogCard({
   className,
   ...props
 }: BlogCardProps) {
+  const t = useTranslations();
+
   return (
     <div
       {...props}
@@ -50,7 +53,7 @@ export function BlogCard({
           href={href || "#"}
           className="mt-auto flex w-fit gap-2 rounded-lg bg-primary px-5 py-2 text-gray-50 outline-none hover:bg-primary"
         >
-          <span>Read more</span>
+          <span>{t("blog.card.read-more")}</span>
           <ArrowRight />
         </Link>
       </div>

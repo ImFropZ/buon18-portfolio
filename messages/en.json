@@ -1,23 +1,49 @@
 {
   "undefined": "Undefined",
   "buon18": "Buon18",
+  "see-more": "See more",
+  "get-started": "Get started",
+  "learn-more": "Learn more",
+  "footer": {
+    "title-1": "Welcome to Buon18 -",
+    "title-2": "where technology meets creativity.",
+    "description": "A local tech agency providing ready-to-go solutions that cater to businesses of all sizes, offering innovative and customized IT services to help streamline operations and enhance digital presence.",
+    "keep-in-touch": "Keep in touch with us!",
+    "enter-your-email": "Enter your email",
+    "subscribe": "Subscribe",
+    "copy-right": "@ Copyright 2024 All rights reserved - Buon18"
+  },
   "home": {
-    "nav": "Home"
+    "nav": "Home",
+    "hero": {
+      "slogun": "Empowering Businesses in the Digital Age - Your Partner in IT Solutions.",
+      "description": "At Buon18, we believe in the power of digital transformation. Our mission is to provide cutting-edge IT solutions that not only meet the current demands of businesses but also anticipate future needs. In a world where everything is becoming digital, we strive to lighten the workload of businesses by offering seamless, reliable, and innovative tech solutions."
+    }
   },
   "about": {
     "nav": "About Us",
-    "who-are-we": "Who are we?"
+    "who-are-we": "Who are we?",
+    "home": {
+      "description-1": "Buon18 was established by a group of passionate students in 2022, with a shared vision of becoming a leading provider of IT solutions for businesses. What began as a small freelancing initiative has grown into a robust tech agency committed to driving digital transformation across various industries.",
+      "description-2": "Our team is composed of skilled developers and creative designers who work together to deliver high-quality, customized solutions tailored to the unique needs of each client."
+    }
   },
   "contact": {
     "nav": "Contact Us",
     "information": "Information"
   },
   "service": {
-    "nav": "Our Service"
+    "nav": "Our Service",
+    "card": {
+      "contact": "Contact Us"
+    }
   },
-  "blogs": {
+  "blog": {
     "nav": "Blogs",
     "title": "Blogs",
-    "lastest": "Our Lastest Blogs"
+    "lastest": "Our Lastest Blogs",
+    "card": {
+      "read-more": "Read more"
+    }
   }
 }

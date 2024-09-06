@@ -6,7 +6,7 @@ import React from "react";
 export default function Blogs() {
   return (
     <div className="mx-auto w-[90%] max-w-[82rem] pb-10">
-      <Title className="text-center text-5xl my-6" translateKey="blogs.nav" />
+      <Title className="text-center text-5xl my-6" translateKey="blog.nav" />
       <div className="wrap mx-auto my-10 flex w-full flex-wrap gap-10">
         {BLOGS.map((blog) => {
           return (
