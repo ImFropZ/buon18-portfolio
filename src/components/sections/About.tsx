@@ -9,40 +9,48 @@ export function About() {
   const t = useTranslations();
 
   return (
-    <section className="my-10" id="about-section">
-      <Title className="my-10 text-center">{t("about")}</Title>
+    <section className="my-20" id="about-section">
       <div className="flex flex-col-reverse gap-10 md:flex-row">
         <div className="flex flex-1 flex-col flex-wrap">
           <Title
-            size={2}
-            className="overflow-clip text-nowrap text-4xl text-gray-900"
+            size={1}
+            className="overflow-clip text-nowrap text-5xl font-extrabold text-[#1A56DB]"
           >
-            We are passion
+            Who are we?
           </Title>
-          <p className="mb-5 mt-2 text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            adipisci aperiam exercitationem? Eius, necessitatibus ad? Eos enim
-            cum perspiciatis repellendus commodi tempore, minus nihil id rem
-            quod, eius eveniet aliquid.
-          </p>
+          <div className="my-10 text-lg text-gray-900">
+            <p>
+              Buon18 was established by a group of passionate students in 2022,
+              with a shared vision of becoming a leading provider of IT
+              solutions for businesses. What began as a small freelancing
+              initiative has grown into a robust tech agency committed to
+              driving digital transformation across various industries.
+            </p>
+            <br />
+            <p>
+              Our team is composed of skilled developers and creative designers
+              who work together to deliver high-quality, customized solutions
+              tailored to the unique needs of each client.
+            </p>
+          </div>
           <Link
             href="/about"
-            className="mt-auto flex w-full justify-center gap-5 rounded-lg border py-2 hover:bg-gray-100"
+            className="mt-14 flex w-full justify-center gap-2 rounded-lg border border-gray-900 py-3.5 font-medium hover:bg-gray-100"
           >
             <span>See more</span>
             <ArrowRight />
           </Link>
         </div>
-        <div className="grid place-content-center md:flex-1">
+        <div className="relative grid flex-1 place-content-center">
           <Image
-            src="/images/handshake.jpg"
-            width={500}
-            height={500}
+            src="/images/about.jpg"
+            width={720}
+            height={640}
             alt="about us image"
-            className="rounded-lg shadow-lg"
+            className="absolute inset-0 h-full shadow-lg"
             priority={false}
             placeholder="blur"
-            blurDataURL="/images/handshake-blur.png"
+            blurDataURL="/images/about-blur.jpg"
           ></Image>
         </div>
       </div>
