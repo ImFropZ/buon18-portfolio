@@ -12,7 +12,7 @@ export function Footer({ ...props }: FooterProps) {
   const t = useTranslations();
 
   return (
-    <div className="bg-[#042782]">
+    <div className="bg-[#042782] mt-auto">
       <div
         {...props}
         className={cn(

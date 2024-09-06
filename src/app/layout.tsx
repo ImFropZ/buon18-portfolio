@@ -32,7 +32,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <NavBar />
           {children}
-          <Footer className="mt-auto" />
+          <Footer />
           <ToastContainer
             position="top-center"
             autoClose={5000}
