@@ -15,7 +15,7 @@ const MENUS = [
     link: "/about",
   },
   {
-    label: "blogs.nav",
+    label: "blog.nav",
     link: "/blogs",
   },
   {

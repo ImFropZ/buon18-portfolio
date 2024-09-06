@@ -4,10 +4,13 @@ import { ArrowDown, ArrowRight } from "lucide-react";
 import { cn } from "@/components/utils";
 import { Button } from "@/components/base";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function Hero({ ...props }: HeroProps) {
+  const t = useTranslations();
+
   return (
     <section
       {...props}
@@ -16,26 +19,31 @@ export function Hero({ ...props }: HeroProps) {
         props.className,
       )}
     >
-      <h1 className="mx-auto w-[70%] text-center text-6xl font-extrabold text-white">
-        Empowering Businesses in the Digital Age - Your Partner in IT Solutions.
+      <h1 className="mx-auto w-[32ch] text-center text-6xl font-extrabold leading-normal text-white">
+        {t("home.hero.slogun")}
       </h1>
       <p className="mx-auto w-[72ch] text-center text-lg text-gray-300">
-        At Buon18, we believe in the power of digital transformation. Our
-        mission is to provide cutting-edge IT solutions that not only meet the
-        current demands of businesses but also anticipate future needs. In a
-        world where everything is becoming digital, we strive to lighten the
-        workload of businesses by offering seamless, reliable, and innovative
-        tech solutions.
+        {t("home.hero.description")}
       </p>
       <div className="flex justify-center gap-4">
         <Button className="flex h-fit items-center gap-2 rounded-lg bg-[#1A56DB] px-5 py-3 font-medium text-white outline-none">
-          <p>Get started</p>
+          <p>{t("get-started")}</p>
           <ArrowRight />
         </Button>
         <Button className="flex h-fit items-center gap-2 rounded-lg border px-5 py-3 font-medium text-white">
-          Learn more
+          {t("learn-more")}
         </Button>
       </div>
+      <video
+        preload="none"
+        aria-label="Video player"
+        className="absolute inset-0 h-full w-full -z-10 object-fill"
+        autoPlay={true}
+        loop
+        muted
+      >
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
     </section>
   );
 }

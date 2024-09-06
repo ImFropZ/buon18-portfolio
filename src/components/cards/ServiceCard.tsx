@@ -4,6 +4,7 @@ import { cn } from "../utils";
 import React from "react";
 import { Service } from "@/data";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface ServiceCardProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -19,6 +20,8 @@ export function ServiceCard({
   className,
   ...props
 }: ServiceCardProps) {
+  const t = useTranslations();
+
   return (
     <div
       {...props}
@@ -49,7 +52,7 @@ export function ServiceCard({
       </div>
       <Link href="/contact">
         <Button className="mt-auto w-full rounded-lg bg-primary py-2 text-gray-50 outline-none hover:bg-primary">
-          Contact Us
+          {t("service.card.contact")}
         </Button>
       </Link>
     </div>

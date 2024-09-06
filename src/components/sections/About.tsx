@@ -17,25 +17,15 @@ export function About() {
             translateKey="about.who-are-we"
           />
           <div className="my-10 text-lg text-gray-900">
-            <p>
-              Buon18 was established by a group of passionate students in 2022,
-              with a shared vision of becoming a leading provider of IT
-              solutions for businesses. What began as a small freelancing
-              initiative has grown into a robust tech agency committed to
-              driving digital transformation across various industries.
-            </p>
+            <p>{t("about.home.description-1")}</p>
             <br />
-            <p>
-              Our team is composed of skilled developers and creative designers
-              who work together to deliver high-quality, customized solutions
-              tailored to the unique needs of each client.
-            </p>
+            <p>{t("about.home.description-2")}</p>
           </div>
           <Link
             href="/about"
             className="mt-14 flex w-full justify-center gap-2 rounded-lg border border-gray-900 py-3.5 font-medium hover:bg-gray-100"
           >
-            <span>See more</span>
+            <span>{t("see-more")}</span>
             <ArrowRight />
           </Link>
         </div>
