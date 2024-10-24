@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/components/utils";
 import { Button } from "@/components/base";
 import React from "react";

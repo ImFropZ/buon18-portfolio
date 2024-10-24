@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { cn } from "./utils";
 import React from "react";
@@ -5,14 +7,28 @@ import { Button, Title } from "./base";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { toast } from "react-toastify";
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function Footer({ ...props }: FooterProps) {
+  const emailRef = React.useRef<null | HTMLInputElement>(null);
   const t = useTranslations();
 
+  const onSubscribeHandler = (email: string) => {
+    return fetch("/api/subscribe", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+    });
+  };
+
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   return (
-    <div className="bg-[#042782]">
+    <div className="mt-auto bg-[#042782]">
       <div
         {...props}
         className={cn(
@@ -68,8 +84,40 @@ export function Footer({ ...props }: FooterProps) {
               type="email"
               placeholder={t("footer.enter-your-email")}
               className="rounded-lg px-4 py-3 text-lg text-black placeholder:text-[#0066CCAA]"
+              ref={emailRef}
             />
-            <Button className="flex h-fit w-fit items-center gap-2 rounded-lg bg-[#1A56DB] px-5 py-3 font-medium text-white outline-none">
+            <Button
+              className="flex h-fit w-fit items-center gap-2 rounded-lg bg-[#1A56DB] px-5 py-3 font-medium text-white outline-none"
+              onClick={() => {
+                if (emailRef.current != null) {
+                  if (isValidEmail(emailRef.current.value)) {
+                    onSubscribeHandler(emailRef.current.value)
+                      .then((res) => res.json())
+                      .then((data) => {
+                        if (data.id) {
+                          toast.success("Subscribed successfully", {
+                            autoClose: 2000,
+                            position: "top-right",
+                          });
+                          if (emailRef.current) emailRef.current.value = "";
+                        }
+
+                        if (data.error) {
+                          toast.error(data.error, {
+                            autoClose: 2000,
+                            position: "top-right",
+                          });
+                        }
+                      });
+                  } else {
+                    toast.error("Invalid email", {
+                      autoClose: 2000,
+                      position: "top-right",
+                    });
+                  }
+                }
+              }}
+            >
               <p>{t("footer.subscribe")}</p>
               <ArrowRight />
             </Button>

@@ -37,8 +37,9 @@ export function Menu() {
             key={menu.link}
             className="relative cursor-pointer select-none after:absolute after:left-0 after:top-full after:h-1 after:w-full after:scale-x-[115%] after:content-normal data-[active=true]:after:bg-[#042782]"
             data-active={
-              pathname.toLowerCase().includes(menu.label.toLowerCase()) ||
-              (pathname === "/" && menu.label.toLowerCase() === "home")
+              pathname === "/"
+                ? menu.link.toLowerCase() === "/"
+                : menu.link.toLowerCase().startsWith(pathname.toLowerCase())
             }
           >
             {t(menu.label.toLowerCase())}
