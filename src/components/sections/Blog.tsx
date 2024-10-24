@@ -13,7 +13,7 @@ export function Blog() {
 
   return (
     <section className="my-10">
-      <Title className="mt-10 text-5xl md:mb-10" translateKey="blog.lastest" />
+      <Title className="mt-10 text-5xl md:mb-10 text-primary text-center" translateKey="blog.lastest" />
       {/* NOTE: Mobile View only */}
       <p className="my-5 text-center text-sm text-gray-500 md:hidden">
         Scroll to the right for more info

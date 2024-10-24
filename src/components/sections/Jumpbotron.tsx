@@ -7,7 +7,7 @@ export function Jumpbotron() {
   return (
     <section className="my-20 flex flex-wrap gap-10">
       <div className="flex flex-1 flex-col gap-5">
-        <Title className="text-6xl">
+        <Title className="text-6xl text-primary">
           We invest in the world&apos;s potential
         </Title>
         <p className="text-gray-500">

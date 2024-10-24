@@ -73,10 +73,15 @@ export function ServiceCard({
 
 function ServicePoint({ state, text }: { state: boolean; text: string }) {
   return (
-    <div className="flex gap-2">
-      <CheckCircle2
-        className={cn("stroke-white", state ? "fill-primary" : "fill-gray-400")}
-      />
+    <div className="flex h-fit gap-2">
+      <div>
+        <CheckCircle2
+          className={cn(
+            "stroke-white",
+            state ? "fill-primary" : "fill-gray-400",
+          )}
+        />
+      </div>
       <span className={cn("text-gray-700", state ? "" : "line-through")}>
         {text}
       </span>
