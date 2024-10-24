@@ -16,7 +16,7 @@ export function Title({ size, translateKey, ...props }: TitleProps) {
     `h${size || 1}`,
     {
       ...props,
-      className: cn("text-primary font-black", props.className),
+      className: cn("text-white font-black", props.className),
     },
     translateKey ? t(translateKey) : props.children,
   );

@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { useTranslations } from "next-intl";
 
-const MENUS = [
+export const MENUS = [
   {
     label: "home.nav",
     link: "/",
@@ -29,13 +29,13 @@ export function Menu() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-1 justify-center gap-12 p-3 px-7 font-medium">
+    <nav className="flex-1 justify-center md:gap-12 p-3 px-7 font-medium hidden lg:flex gap-2">
       {MENUS.map((menu) => {
         return (
           <Link
             href={menu.link}
             key={menu.link}
-            className="relative cursor-pointer select-none after:absolute after:left-0 after:top-full after:h-1 after:w-full after:scale-x-[115%] after:content-normal data-[active=true]:after:bg-[#042782]"
+            className="relative cursor-pointer select-none after:absolute after:left-0 after:top-full after:h-1 after:w-full after:scale-x-[115%] after:content-normal data-[active=true]:after:bg-primary-darker"
             data-active={
               pathname === "/"
                 ? menu.link.toLowerCase() === "/"

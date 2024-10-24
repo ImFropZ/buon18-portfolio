@@ -9,11 +9,11 @@ export function About() {
   const t = useTranslations();
 
   return (
-    <section className="my-20" id="about-section">
+    <section className="my-10" id="about-section">
       <div className="flex flex-col-reverse gap-10 md:flex-row">
         <div className="flex flex-1 flex-col flex-wrap">
           <Title
-            className="overflow-clip text-nowrap text-5xl font-extrabold leading-normal text-[#1A56DB]"
+            className="overflow-clip text-nowrap text-3xl md:text-5xl font-extrabold leading-normal text-[#1A56DB]"
             translateKey="about.who-are-we"
           />
           <div className="my-10 text-lg text-gray-900">

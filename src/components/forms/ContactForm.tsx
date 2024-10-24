@@ -12,6 +12,7 @@ import { ContactTemplate } from "@/components/email";
 import { toast } from "react-toastify";
 import React from "react";
 import * as z from "zod";
+import { useTranslations } from "next-intl";
 
 async function onSend(data: z.infer<typeof contactSchema>) {
   return await fetch("/api/send-mail", {
@@ -28,6 +29,7 @@ async function onSend(data: z.infer<typeof contactSchema>) {
 interface ContactFormProps extends React.FormHTMLAttributes<HTMLFormElement> {}
 
 export function ContactForm({ ...props }: ContactFormProps) {
+  const t = useTranslations();
   const [buttonDisable, setButtonDisable] = React.useState(false);
 
   const form = useForm({
@@ -68,7 +70,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
             <InputFormField
               field={field}
               errorField={form.formState.errors.name}
-              label="Name"
+              label={t("contact.form.name")}
             />
           );
         }}
@@ -81,7 +83,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
             <InputFormField
               field={field}
               errorField={form.formState.errors.email}
-              label="Email"
+              label={t("contact.form.email")}
             />
           );
         }}
@@ -94,7 +96,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
             <InputFormField
               field={field}
               errorField={form.formState.errors.subject}
-              label="Subject"
+              label={t("contact.form.subject")}
             />
           );
         }}
@@ -107,8 +109,8 @@ export function ContactForm({ ...props }: ContactFormProps) {
             <TextareaFormField
               field={field}
               errorField={form.formState.errors.message}
-              label="Message"
-              placeholder="Type your message here"
+              label={t("contact.form.message")}
+              placeholder={t("contact.form.message-placeholder")}
             />
           );
         }}
@@ -117,7 +119,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
         className="relative rounded-lg bg-primary p-3 text-gray-50"
         disabled={buttonDisable}
       >
-        <span>Send</span>
+        <span>{t("contact.form.send")}</span>
         <Send className="absolute right-4 top-1/2 -translate-y-1/2" />
       </Button>
     </form>

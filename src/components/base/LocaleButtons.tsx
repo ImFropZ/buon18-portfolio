@@ -11,7 +11,7 @@ export function LocaleButtons({ className, ...props }: LocaleButtonsProps) {
   return (
     <div
       {...props}
-      className={cn("ml-auto flex w-fit items-center gap-2 px-20", className)}
+      className={cn("ml-auto flex w-fit items-center gap-2 md:px-20 px-2", className)}
     >
       {LANGUAGES.map((lang) => (
         <button

@@ -17,4 +17,4 @@ jobs:
           vercel-args: "--prod"
           vercel-org-id: ${{ secrets.ORG_ID}}
           vercel-project-id: ${{ secrets.PROJECT_ID}}
-          alias-domains: "portfolio-buon18.vercel.app"
+          alias-domains: "buon18.com"

@@ -9,7 +9,7 @@ export function Service() {
   return (
     <section className="my-10">
       <Title
-        className="mt-10 text-center text-5xl md:mb-10"
+        className="mt-10 text-center text-5xl md:mb-10 text-primary"
         translateKey="service.nav"
       />
       {/* NOTE: Mobile View only */}
@@ -18,11 +18,9 @@ export function Service() {
       </p>
       <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto md:grid md:grid-cols-2 md:overflow-visible xl:grid-cols-3">
         {LESS_SERVICES.map((service) => (
-          <ServiceCard
-            key={service.name}
-            {...service}
-            className="relative min-w-full snap-start"
-          />
+          <div key={service.name} className="relative min-w-full snap-start p-2">
+            <ServiceCard service={service} />
+          </div>
         ))}
       </div>
     </section>

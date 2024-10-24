@@ -144,3 +144,10 @@
     format("woff2");
   unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
 }
+
+._3d-text {
+  text-shadow:
+    1px 1px #6CF,
+    2px 2px #6CF,
+    3px 3px #6CF;
+}

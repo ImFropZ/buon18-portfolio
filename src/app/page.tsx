@@ -1,4 +1,4 @@
-import { About, Blog, Hero, Jumpbotron, Service } from "@/components";
+import { About, Blog, Hero,  Service } from "@/components";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
         <About />
         <Service />
         <Blog />
-        <Jumpbotron />
+        {/* <Jumpbotron /> */}
       </main>
     </div>
   );

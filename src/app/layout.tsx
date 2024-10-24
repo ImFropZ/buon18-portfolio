@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
-  title: "Buon18 Portfolio",
+  title: "Buon18",
   description: "",
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIIFICATION,
@@ -28,6 +28,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <link rel="preload" href="/images/about-blur.jpg" as="image" />
+      <link rel="preload" href="/images/hero-bg.gif" as="video" />
       <body className="flex min-h-screen flex-col font-primary">
         <NextIntlClientProvider messages={messages}>
           <NavBar />
