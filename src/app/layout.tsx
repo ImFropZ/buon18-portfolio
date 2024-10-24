@@ -28,6 +28,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <link rel="preload" href="/images/about-blur.jpg" as="image" />
+      <link rel="preload" href="/images/hero-bg.gif" as="video" />
       <body className="flex min-h-screen flex-col font-primary">
         <NextIntlClientProvider messages={messages}>
           <NavBar />

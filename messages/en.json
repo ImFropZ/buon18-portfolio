@@ -4,6 +4,7 @@
   "see-more": "See more",
   "get-started": "Get started",
   "learn-more": "Learn more",
+  "scroll-to-right": "Scroll to the right for more info",
   "footer": {
     "title-1": "Welcome to Buon18 -",
     "title-2": "where technology meets creativity.",
@@ -26,11 +27,66 @@
     "home": {
       "description-1": "Buon18 was established by a group of passionate students in 2022, with a shared vision of becoming a leading provider of IT solutions for businesses. What began as a small freelancing initiative has grown into a robust tech agency committed to driving digital transformation across various industries.",
       "description-2": "Our team is composed of skilled developers and creative designers who work together to deliver high-quality, customized solutions tailored to the unique needs of each client."
+    },
+    "information": "At Buon18, we believe in the power of digital transformation. Our mission is to provide cutting-edge IT solutions that not only meet the current demands of businesses but also anticipate future needs. In a world where everything is becoming digital, we strive to lighten the workload of businesses by offering seamless, reliable, and innovative tech solutions.",
+    "welcome": "Welcome to Buon18 - where technology meets creativity.",
+    "our-work": {
+      "title": "Our Works",
+      "description": "Check out some of our recent projects to see how we've helped businesses like yours succeed in the digital world.",
+      "work": {
+        "quiz-lobby": {
+          "title": "Quiz Lobby",
+          "description": "A quiz platform that helps students prepare for exams and tests."
+        }
+      }
+    },
+    "our-vision": {
+      "title": "Our Vision",
+      "description": "Buon18 envisions becoming a go-to tech agency for businesses seeking reliable, ready-to-deploy IT solutions. Our goal is to simplify the complexities of digitalization by offering solutions that are not only technologically advanced but also easy to implement. We aim to bridge the gap between traditional business operations and the digital world, ensuring that our clients can seamlessly transition into the digital age.",
+      "visions": [
+        "To provide innovative IT solutions that cater to the unique needs of each client.",
+        "To deliver high-quality services that exceed client expectations.",
+        "To empower businesses to thrive in the digital age."
+      ]
+    },
+    "our-mission": {
+      "title": "Our Mission",
+      "description": "Transform traditional local businesses into fully digitalized entities, enabling them to thrive in an increasingly digital world.",
+      "short-term-goal": "Short-term Goal",
+      "long-term-goal": "Long-term Goal",
+      "mission": {
+        "now": {
+          "time": "Now",
+          "description": "Focus on content creation, social media management, and blogging to build brand awareness and engage with our target audience."
+        },
+        "6-months": {
+          "time": "6 months",
+          "description": "Transition into a full-fledged IT solution team, capable of bringing clients' ideas to life by providing comprehensive digital solutions that exceed their expectations."
+        },
+        "1-year": {
+          "time": "1 year",
+          "description": "Establish Buon18 as a reputable IT solution company, partnering with experienced business owners to drive digitalization efforts across various industries."
+        },
+        "2-years": {
+          "time": "2 years",
+          "description": "Expand our services to become a local IT solution provider that addresses the specific needs of businesses, helping them to stay competitive in a rapidly evolving market."
+        }
+      }
     }
   },
   "contact": {
     "nav": "Contact Us",
-    "information": "Information"
+    "information": "Information",
+    "description": "If you have any questions or inquiries, feel free to contact us. We are here to help you with your IT needs and provide you with the best solutions to meet your requirements.",
+    "find-us-on": "Find us on",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "message-placeholder": "Enter your message here...",
+      "send": "Send"
+    }
   },
   "service": {
     "nav": "Our Service",
@@ -45,6 +101,7 @@
     "nav": "Blogs",
     "title": "Blogs",
     "lastest": "Our Lastest Blogs",
+    "warning": "These are blogs from our team, we hope you enjoy them.",
     "card": {
       "read-more": "Read more"
     }

@@ -35,7 +35,7 @@ export function Menu() {
           <Link
             href={menu.link}
             key={menu.link}
-            className="relative cursor-pointer select-none after:absolute after:left-0 after:top-full after:h-1 after:w-full after:scale-x-[115%] after:content-normal data-[active=true]:after:bg-[#042782]"
+            className="relative cursor-pointer select-none after:absolute after:left-0 after:top-full after:h-1 after:w-full after:scale-x-[115%] after:content-normal data-[active=true]:after:bg-primary-darker"
             data-active={
               pathname === "/"
                 ? menu.link.toLowerCase() === "/"

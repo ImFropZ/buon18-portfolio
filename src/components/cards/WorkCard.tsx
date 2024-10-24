@@ -1,10 +1,17 @@
 import { Package } from "lucide-react";
 import { Button, Title } from "@/components/base";
 import { cn } from "@/components/utils";
+import { Work } from "@/data";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
-interface WorkCardProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface WorkCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  work: Work;
+}
 
-export function WorkCard({ className, ...props }: WorkCardProps) {
+export function WorkCard({ work, className, ...props }: WorkCardProps) {
+  const t = useTranslations();
+
   return (
     <div
       {...props}
@@ -15,8 +22,8 @@ export function WorkCard({ className, ...props }: WorkCardProps) {
     >
       <div className="relative max-h-40">
         <img
-          src="https://placehold.co/50"
-          alt=""
+          src={work.image.src}
+          alt={work.image.alt}
           className="h-full w-full object-cover"
         />
         <Package
@@ -26,15 +33,17 @@ export function WorkCard({ className, ...props }: WorkCardProps) {
       </div>
       <div className="relative p-5">
         <Title size={3} className="text-center text-2xl font-bold text-black">
-          Work Title
+          {t(`about.our-work.work.${work.translateKey}.title`)}
         </Title>
         <p className="mx-auto mt-5 w-[90%] text-center text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-          inventore.
+          {t(`about.our-work.work.${work.translateKey}.description`)}
         </p>
-        <Button className="group/button mt-5 w-full py-1 hover:bg-primary hover:outline-gray-500">
-          <span className="group-hover/button:text-white">Learn more</span>
-        </Button>
+        <Link
+          href={work.href}
+          className="group/button mt-5 block w-full rounded py-1 text-center outline outline-2 hover:bg-primary hover:outline-gray-300"
+        >
+          <span className="group-hover/button:text-white">{t(`learn-more`)}</span>
+        </Link>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ export function NavBar({ ...props }: NavBarProps) {
     <div
       {...props}
       className={cn(
-        "relative flex w-full flex-col overflow-hidden p-4 after:absolute after:left-1/2 after:top-[calc(100%-1rem)] after:h-24 after:w-1/2 after:-translate-x-1/2 after:content-normal after:rounded-3xl after:bg-[#042782]",
+        "relative flex w-full flex-col overflow-hidden p-4 after:absolute after:left-1/2 after:top-[calc(100%-1rem)] after:h-24 after:w-1/2 after:-translate-x-1/2 after:content-normal after:rounded-3xl after:bg-primary-darker",
         props.className,
       )}
     >

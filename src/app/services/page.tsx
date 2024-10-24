@@ -9,7 +9,7 @@ export default function Services() {
 
   return (
     <>
-      <div className="bg-[#042782]">
+      <div className="bg-primary-darker">
         <Title
           className="py-6 text-center text-5xl"
           translateKey="service.nav"

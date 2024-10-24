@@ -28,7 +28,7 @@ export function Footer({ ...props }: FooterProps) {
   };
 
   return (
-    <div className="mt-auto bg-[#042782]">
+    <div className="mt-auto bg-primary-darker">
       <div
         {...props}
         className={cn(

@@ -32,7 +32,6 @@ export const TextareaFormField = React.forwardRef<
         data-error={!!errorField}
         placeholder={placeholder || label}
       />
-      <p className="text-sm text-gray-500">A message for extra info</p>
     </div>
   );
 });
