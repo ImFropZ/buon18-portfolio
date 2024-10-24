@@ -34,8 +34,11 @@
   },
   "service": {
     "nav": "Our Service",
+    "description": "We offer various flexible solutions to help businesses establish and grow their online presence. Whether you're looking for a simple, professional website or fully customized system to manage your operations, we have the right package to meet your needs. Each service is to provide the best value while ensuring high-quality results that align with your business goals. Explore our packages below to find the one that best suits your requirements.",
+    "warning": "Please note that the prices are subject to change. Contact us for more information.",
     "card": {
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "popular": "Popular Services"
     }
   },
   "blog": {

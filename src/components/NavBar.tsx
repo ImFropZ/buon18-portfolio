@@ -35,7 +35,7 @@ export function NavBar({ ...props }: NavBarProps) {
         </Link>
         <Menu />
         <div className="flex flex-1 justify-end gap-10 font-medium leading-5 pr-12">
-          <span>(555) 555-1234</span>
+          <span>(xxx) xxx-xxxx</span>
           <Link href="/contact">
             <span className="cursor-pointer select-none text-primary">
               {t("contact.nav")}

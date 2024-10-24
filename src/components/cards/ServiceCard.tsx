@@ -6,17 +6,12 @@ import { Service } from "@/data";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-interface ServiceCardProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    Service {}
+interface ServiceCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  service: Service;
+}
 
 export function ServiceCard({
-  type,
-  name,
-  description,
-  price,
-  availableServices,
-  unavailableServices,
+  service,
   className,
   ...props
 }: ServiceCardProps) {
@@ -25,24 +20,41 @@ export function ServiceCard({
   return (
     <div
       {...props}
-      className={cn("flex flex-col rounded border p-5", className)}
+      className={cn(
+        "relative flex flex-col rounded border p-5",
+        service.isPopular && "outline outline-4 outline-primary",
+        className,
+      )}
     >
-      <p className="text-xl text-gray-500">{name}</p>
-      <Title size={2} className="my-2 text-5xl text-gray-900">
-        ${price}
+      {service.isPopular && (
+        <span className="absolute right-2 top-2 rounded-md bg-primary px-2 py-1 text-gray-50">
+          {t("service.card.popular")}
+        </span>
+      )}
+      <p className="text-xl text-gray-500">{service.name}</p>
+      <Title
+        size={2}
+        className={cn(
+          "my-2 text-5xl text-gray-900",
+          service.isPopular && "_3d-text text-primary-dark",
+        )}
+      >
+        {typeof service.price === "string" ? "" : "$"}
+        {service.price}
+        {service.isMore && "+"}
         <span
           className="text-xl font-normal text-gray-500"
-          hidden={type !== "MONTHLY"}
+          hidden={service.type !== "MONTHLY"}
         >
           /month
         </span>
       </Title>
-      <p className="mb-5 text-gray-500">{description}</p>
+      <p className="mb-5 text-gray-500">{service.description}</p>
       <div className="flex flex-col gap-2 pb-10">
-        {availableServices.map((service) => (
+        {service.availableServices.map((service) => (
           <ServicePoint key={service.label} state={true} text={service.label} />
         ))}
-        {unavailableServices.map((service) => (
+        {service.unavailableServices.map((service) => (
           <ServicePoint
             key={service.label}
             state={false}
@@ -50,7 +62,7 @@ export function ServiceCard({
           />
         ))}
       </div>
-      <Link href="/contact">
+      <Link href="/contact" className="mt-auto">
         <Button className="mt-auto w-full rounded-lg bg-primary py-2 text-gray-50 outline-none hover:bg-primary">
           {t("service.card.contact")}
         </Button>

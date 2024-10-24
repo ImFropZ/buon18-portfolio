@@ -20,7 +20,7 @@ export function Service() {
         {LESS_SERVICES.map((service) => (
           <ServiceCard
             key={service.name}
-            {...service}
+            service={service}
             className="relative min-w-full snap-start"
           />
         ))}
