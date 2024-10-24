@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
-  title: "Buon18 Portfolio",
+  title: "Buon18",
   description: "",
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIIFICATION,

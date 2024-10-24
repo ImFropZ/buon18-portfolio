@@ -40,6 +40,7 @@ export function WorkCard({ work, className, ...props }: WorkCardProps) {
         </p>
         <Link
           href={work.href}
+          target="_blank"
           className="group/button mt-5 block w-full rounded py-1 text-center outline outline-2 hover:bg-primary hover:outline-gray-300"
         >
           <span className="group-hover/button:text-white">{t(`learn-more`)}</span>
