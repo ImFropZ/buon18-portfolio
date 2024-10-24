@@ -1,7 +1,6 @@
 import { WorkCard } from "@/components";
 import { Title } from "@/components/base";
 import { WORKS } from "@/data";
-import { Dot } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React from "react";
 

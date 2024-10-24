@@ -4,13 +4,10 @@ import { Title } from "@/components/base";
 import { BlogCard } from "@/components";
 import { BLOGS } from "@/data";
 import React from "react";
-import { useTranslations } from "use-intl";
 
 const LESS_BLOGS = BLOGS.slice(0, 3);
 
 export function Blog() {
-  const t = useTranslations();
-
   return (
     <section className="my-10">
       <Title className="mt-10 text-5xl md:mb-10 text-primary text-center" translateKey="blog.lastest" />

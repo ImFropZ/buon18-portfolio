@@ -1,5 +1,5 @@
 import { Package } from "lucide-react";
-import { Button, Title } from "@/components/base";
+import { Title } from "@/components/base";
 import { cn } from "@/components/utils";
 import { Work } from "@/data";
 import { useTranslations } from "next-intl";
