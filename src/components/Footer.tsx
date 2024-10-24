@@ -36,7 +36,7 @@ export function Footer({ ...props }: FooterProps) {
           props.className,
         )}
       >
-        <div className="grid grid-cols-2 gap-20">
+        <div className="grid lg:grid-cols-2 gap-20 grid-cols-1">
           <div className="flex flex-col gap-6">
             <Title className="text-4xl text-white">
               {t("footer.title-1")}
