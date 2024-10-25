@@ -64,13 +64,10 @@ export const SERVICES: Service[] = [
         label: "Domain Assignment (Yearly Cost)",
       },
       {
-        label: "Basic SEO",
+        label: "SEO Optimization",
       },
       {
         label: "Mobile-Responsive Design",
-      },
-      {
-        label: "1-2 Page Structure",
       },
       {
         label: "Contact Us Page (Free with Gmail)",
@@ -112,13 +109,10 @@ export const SERVICES: Service[] = [
         label: "Domain Assignment (Yearly Cost)",
       },
       {
-        label: "Basic SEO",
+        label: "SEO Optimization",
       },
       {
         label: "Mobile-Responsive Design",
-      },
-      {
-        label: "1-2 Page Structure",
       },
       {
         label: "Contact Us Page (Free with Gmail)",
