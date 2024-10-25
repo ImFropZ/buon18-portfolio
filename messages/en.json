@@ -105,5 +105,9 @@
     "card": {
       "read-more": "Read more"
     }
+  },
+  "technology": {
+    "title": "Technologies",
+    "description": "Technologies We Use to Stay at the Cutting Edge"
   }
 }

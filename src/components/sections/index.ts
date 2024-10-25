@@ -3,3 +3,4 @@ export * from "./About";
 export * from "./Service";
 export * from "./Blog";
 export * from "./Jumpbotron";
+export * from "./Technology";
