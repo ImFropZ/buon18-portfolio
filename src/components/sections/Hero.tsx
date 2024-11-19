@@ -15,14 +15,14 @@ export function Hero({ ...props }: HeroProps) {
     <section
       {...props}
       className={cn(
-        "relative grid h-[75vh] w-full place-content-center gap-14 overflow-hidden bg-primary-darker/90 px-4 py-40",
+        "relative grid w-full place-content-center gap-14 overflow-hidden bg-primary-darker/90 px-4 py-20 lg:py-40",
         props.className,
       )}
     >
-      <h1 className="mx-auto max-w-[32ch] text-center text-lg font-extrabold leading-normal text-white md:text-6xl">
+      <h1 className="mx-auto max-w-[32ch] text-center text-2xl font-extrabold leading-normal text-white lg:text-6xl">
         {t("home.hero.slogun")}
       </h1>
-      <p className="mx-auto max-w-[72ch] text-center text-sm text-gray-300 md:text-lg">
+      <p className="mx-auto max-w-[72ch] text-center text-sm text-gray-300 lg:text-lg">
         {t("home.hero.description")}
       </p>
       <div className="flex justify-center gap-4">
