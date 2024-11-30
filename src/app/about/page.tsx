@@ -37,7 +37,7 @@ export default function About() {
               {t("scroll-to-right")}
             </p>
           )}
-          <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto md:grid md:grid-cols-[repeat(auto-fill,minmax(0,20rem))] md:overflow-visible">
+          <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto pb-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(0,20rem))] md:overflow-visible md:pb-0">
             {WORKS.map((work, i) => (
               <WorkCard
                 key={i}

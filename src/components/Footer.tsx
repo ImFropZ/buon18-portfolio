@@ -36,7 +36,7 @@ export function Footer({ ...props }: FooterProps) {
           props.className,
         )}
       >
-        <div className="grid lg:grid-cols-2 gap-20 grid-cols-1">
+        <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
             <Title className="text-4xl text-white">
               {t("footer.title-1")}
@@ -45,7 +45,7 @@ export function Footer({ ...props }: FooterProps) {
             </Title>
             <p className="text-sm text-gray-200">{t("footer.description")}</p>
             <div className="flex gap-2">
-              <Link href={"https://www.github.com/buon18"}>
+              <Link href={"https://www.github.com/buon18"} target="_blank">
                 <Image
                   src="/images/github.svg"
                   alt="github"
@@ -53,10 +53,32 @@ export function Footer({ ...props }: FooterProps) {
                   height={32}
                 />
               </Link>
-              <Link href={"https://www.facebook.com/buon18.kh"}>
+              <Link href={"https://www.facebook.com/buon18.kh"} target="_blank">
                 <Image
                   src="/images/facebook.svg"
                   alt="facebook"
+                  width={32}
+                  height={32}
+                />
+              </Link>
+              <Link
+                href={"https://www.youtube.com/@buon18-tech?sub_confirmation=1"}
+                target="_blank"
+              >
+                <Image
+                  src="/images/youtube.svg"
+                  alt="youtube"
+                  width={32}
+                  height={32}
+                />
+              </Link>
+              <Link
+                href={"#"}
+                target="_blank"
+              >
+                <Image
+                  src="/images/tiktok.svg"
+                  alt="tiktok"
                   width={32}
                   height={32}
                 />

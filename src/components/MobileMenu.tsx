@@ -13,7 +13,11 @@ export function MobileMenu() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div className="lg:hidden">
+    <div className="flex items-center gap-4 lg:hidden">
+      <Link href="tel:+855764184185">
+        <span className="font-semibold tracking-wider">{t("telephone.number")}</span>
+      </Link>
+
       <AlignLeft
         onClick={() => {
           setIsOpen(!isOpen);
