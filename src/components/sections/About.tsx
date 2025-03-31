@@ -13,7 +13,7 @@ export function About() {
       <div className="flex flex-col-reverse gap-10 md:flex-row">
         <div className="flex flex-1 flex-col flex-wrap">
           <Title
-            className="overflow-clip text-nowrap text-3xl md:text-5xl font-extrabold leading-normal text-[#1A56DB]"
+            className="overflow-clip text-nowrap py-2 text-3xl font-extrabold leading-normal text-[#1A56DB] md:text-5xl"
             translateKey="about.who-are-we"
           />
           <div className="my-10 text-lg text-gray-900">

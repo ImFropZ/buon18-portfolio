@@ -140,6 +140,43 @@ export const SERVICES: Service[] = [
   },
   {
     type: "ONE_TIME",
+    name: "Custom Business Website",
+    description:
+      "This package is for companies that require a custom website with specific features tailored to their business needs. Contact us to discuss your requirements. Below are some key features we can include:",
+    price: "Custom",
+    availableServices: [
+      {
+        label: "Website Hosting",
+      },
+      {
+        label: "Domain Assignment (Yearly Cost)",
+      },
+      {
+        label: "SEO Optimization",
+      },
+      {
+        label: "Mobile-Responsive Design",
+      },
+      {
+        label: "Contact Us Page (Free with Gmail)",
+      },
+      {
+        label: "About Us Page",
+      },
+      {
+        label: "Customized Header and Footer",
+      },
+      {
+        label: "Partners/Co-op Companies Section",
+      },
+      {
+        label: "Customers Section",
+      },
+    ],
+    unavailableServices: [],
+  },
+  {
+    type: "ONE_TIME",
     name: "System Integration",
     description:
       "Build a custom system that fits your specific business needs. Contact us to discuss your requirements. Below are some key features we can include:",
@@ -152,25 +189,16 @@ export const SERVICES: Service[] = [
         label: "Domain Assignment (Yearly Cost)",
       },
       {
-        label: "User Authentication and Authorization",
+        label: "Inventory System",
       },
       {
-        label: "User Login Management",
-      },
-      {
-        label: "Inventory Management System",
-      },
-      {
-        label: "Sales Management System",
+        label: "Sales System",
       },
       {
         label: "Accounting System",
       },
       {
-        label: "Invoice Generation",
-      },
-      {
-        label: "Export Data to Excel",
+        label: "Human Resources System",
       },
     ],
     unavailableServices: [],
