@@ -1,4 +1,4 @@
-import { Footer, Header, ScrollToTop } from "@/components";
+import { Footer, Header } from "@/components";
 import type { Metadata } from "next";
 import { Bounce, ToastContainer } from "react-toastify";
 import { getLocale, getMessages } from "next-intl/server";
@@ -42,7 +42,6 @@ export default async function RootLayout({
           />
           <div id="backdrop-portal" />
         </NextIntlClientProvider>
-        {/* <ScrollToTop /> */}
       </body>
     </html>
   );

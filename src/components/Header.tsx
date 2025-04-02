@@ -1,6 +1,5 @@
 import { Menu } from "@/components";
 import { cn } from "./utils";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -8,8 +7,6 @@ import Link from "next/link";
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function Header(props: HeaderProps) {
-  const t = useTranslations();
-
   return (
     <header
       {...props}

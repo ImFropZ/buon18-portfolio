@@ -73,7 +73,7 @@ export default function Services() {
           Services
         </Title>
         <p className="text-center text-lg">
-          We're plan to make your business even bigger
+          We&apos;re plan to make your business even bigger
         </p>
       </div>
       <div className="mx-auto my-10 w-[90%] max-w-[82rem] pb-10">
@@ -89,11 +89,11 @@ export default function Services() {
         </p>
         <p className="mt-10">
           Buon18 is your trusted partner in digital transformation. Whether
-          you're a small business looking to expand your online presence or a
-          large organization seeking custom IT solutions, we are here to provide
-          you with innovative, cost-effective services that align with your
-          goals and deliver results. Let us help you build the future of your
-          business!
+          you&apos;re a small business looking to expand your online presence or
+          a large organization seeking custom IT solutions, we are here to
+          provide you with innovative, cost-effective services that align with
+          your goals and deliver results. Let us help you build the future of
+          your business!
         </p>
       </div>
     </>
