@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "../base";
+import { Title } from "./base";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -12,7 +12,9 @@ export function Technology() {
         className="mt-10 text-center text-5xl text-primary md:mb-10"
         translateKey="technology.title"
       />
-      <p className="text-center text-gray-700 mt-2 md:mt-0">{t("technology.description")}</p>
+      <p className="mt-2 text-center text-gray-700 md:mt-0">
+        {t("technology.description")}
+      </p>
       <div className="mt-6 grid auto-rows-[3rem] gap-4 p-4 md:auto-rows-[8rem] md:gap-10">
         <div className="flex justify-center gap-6">
           <div className="aspect-square h-full">

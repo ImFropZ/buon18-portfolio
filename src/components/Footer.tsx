@@ -28,11 +28,11 @@ export function Footer({ ...props }: FooterProps) {
   };
 
   return (
-    <div className="mt-auto bg-primary-darker">
+    <div className="mt-auto">
       <div
         {...props}
         className={cn(
-          "mx-auto grid w-full max-w-[96rem] place-content-center p-16 pb-0 text-white",
+          "mx-auto grid w-full max-w-[96rem] place-content-center p-4 pb-0 text-white xl:p-16",
           props.className,
         )}
       >
@@ -72,10 +72,7 @@ export function Footer({ ...props }: FooterProps) {
                   height={32}
                 />
               </Link>
-              <Link
-                href={"#"}
-                target="_blank"
-              >
+              <Link href={"#"} target="_blank">
                 <Image
                   src="/images/tiktok.svg"
                   alt="tiktok"
@@ -105,11 +102,11 @@ export function Footer({ ...props }: FooterProps) {
             <input
               type="email"
               placeholder={t("footer.enter-your-email")}
-              className="rounded-lg px-4 py-3 text-lg text-black placeholder:text-[#0066CCAA]"
+              className="rounded-lg px-4 py-3 text-lg text-black placeholder:text-primary"
               ref={emailRef}
             />
             <Button
-              className="flex h-fit w-fit items-center gap-2 rounded-lg bg-[#1A56DB] px-5 py-3 font-medium text-white outline-none"
+              className="flex h-fit w-fit items-center gap-2 rounded-lg bg-primary px-8 py-4 font-medium text-white outline-none"
               onClick={() => {
                 if (emailRef.current != null) {
                   if (isValidEmail(emailRef.current.value)) {
@@ -146,7 +143,7 @@ export function Footer({ ...props }: FooterProps) {
           </div>
         </div>
         <p className="mx-auto my-8 text-sm font-normal leading-5 tracking-wide text-gray-200">
-          {t("footer.copy-right")}
+          @Copyright {new Date().getFullYear()} All rights reserved - Buon18
         </p>
       </div>
     </div>

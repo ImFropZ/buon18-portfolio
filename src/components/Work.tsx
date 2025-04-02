@@ -1,15 +1,16 @@
-import { Package } from "lucide-react";
-import { Title } from "@/components/base";
-import { cn } from "@/components/utils";
-import { Work } from "@/data";
+import React from "react";
+import { Title } from "./base";
+import { Work as IWork, WORKS } from "@/data";
 import { useTranslations } from "next-intl";
+import { cn } from "./utils";
+import { Package } from "lucide-react";
 import Link from "next/link";
 
 interface WorkCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  work: Work;
+  work: IWork;
 }
 
-export function WorkCard({ work, className, ...props }: WorkCardProps) {
+function WorkItem({ work, className, ...props }: WorkCardProps) {
   const t = useTranslations();
 
   return (
@@ -43,8 +44,38 @@ export function WorkCard({ work, className, ...props }: WorkCardProps) {
           target="_blank"
           className="group/button mt-5 block w-full rounded py-1 text-center outline outline-2 hover:bg-primary hover:outline-gray-300"
         >
-          <span className="group-hover/button:text-white">{t(`learn-more`)}</span>
+          <span className="group-hover/button:text-white">
+            {t(`learn-more`)}
+          </span>
         </Link>
+      </div>
+    </div>
+  );
+}
+
+export function Work() {
+  const t = useTranslations();
+
+  return (
+    <div className="my-10">
+      <Title size={2} className="mb-5 text-4xl text-gray-900">
+        {t("about.our-work.title")}
+      </Title>
+      <p className="my-4 text-gray-500">{t("about.our-work.description")}</p>
+      {/* NOTE: Mobile View only */}
+      {WORKS.length < 2 ? null : (
+        <p className="my-5 text-center text-sm text-gray-500 md:hidden">
+          {t("scroll-to-right")}
+        </p>
+      )}
+      <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto pb-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(0,20rem))] md:overflow-visible md:pb-0">
+        {WORKS.map((work, i) => (
+          <WorkItem
+            key={i}
+            work={work}
+            className="relative min-w-full snap-start"
+          />
+        ))}
       </div>
     </div>
   );

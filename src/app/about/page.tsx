@@ -1,6 +1,5 @@
-import { WorkCard } from "@/components";
+import { Work } from "@/components";
 import { Title } from "@/components/base";
-import { WORKS } from "@/data";
 import { useTranslations } from "next-intl";
 import React from "react";
 
@@ -24,29 +23,7 @@ export default function About() {
           </Title>
           <p className="text-lg text-gray-500">{t("about.information")}</p>
         </div>
-        <div className="my-10">
-          <Title size={2} className="mb-5 text-4xl text-gray-900">
-            {t("about.our-work.title")}
-          </Title>
-          <p className="my-4 text-gray-500">
-            {t("about.our-work.description")}
-          </p>
-          {/* NOTE: Mobile View only */}
-          {WORKS.length < 2 ? null : (
-            <p className="my-5 text-center text-sm text-gray-500 md:hidden">
-              {t("scroll-to-right")}
-            </p>
-          )}
-          <div className="relative flex w-full snap-x snap-mandatory gap-10 overflow-x-auto pb-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(0,20rem))] md:overflow-visible md:pb-0">
-            {WORKS.map((work, i) => (
-              <WorkCard
-                key={i}
-                work={work}
-                className="relative min-w-full snap-start"
-              />
-            ))}
-          </div>
-        </div>
+        <Work />
         <div className="my-10">
           <Title size={2} className="mb-5 text-4xl text-gray-900">
             {t("about.our-vision.title")}

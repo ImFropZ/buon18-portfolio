@@ -2,18 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 102, 204;
-  --background-start-rgb: 102, 204, 255;
-  --background-end-rgb: 0, 102, 204;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 102, 204, 255;
-    --background-end-rgb: 0, 102, 204;
-  }
+body {
+  background-color: #0d131a;
+  color: white;
 }
 
 /* Font Gotham */
@@ -147,7 +138,27 @@
 
 ._3d-text {
   text-shadow:
-    1px 1px #6CF,
-    2px 2px #6CF,
-    3px 3px #6CF;
+    1px 1px #6cf,
+    2px 2px #6cf,
+    3px 3px #6cf;
+}
+
+*:has([data-modal-open]) {
+  overflow: hidden;
+}
+
+@layer components {
+  ._border-gradient {
+    background:
+      linear-gradient(#0d131a 0 0) padding-box,
+      linear-gradient(45deg, #0d131a 5%, #98cb33) border-box;
+    border: 2px solid transparent;
+  }
+
+  ._border-gradient-white {
+    background:
+      linear-gradient(#ffffff 0 0) padding-box,
+      linear-gradient(45deg, #0d131a 5%, #98cb33) border-box;
+    border: 2px solid transparent;
+  }
 }

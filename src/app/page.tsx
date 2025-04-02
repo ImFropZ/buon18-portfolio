@@ -1,16 +1,17 @@
-import { About, Blog, Hero,  Service, Technology } from "@/components";
+import { About, Blog, Hero, Jumpbotron, Service } from "@/components";
 
 export default function Home() {
+  // return <></>;
   return (
-    <div>
-      <Hero />
-      <main className="mx-auto w-[90%] max-w-[80rem]">
+    <>
+      <div className="mx-auto flex w-[90%] max-w-7xl flex-col gap-12">
+        <Hero />
         <About />
         <Service />
-        <Technology />
+        {/* <Technology /> */}
         <Blog />
-        {/* <Jumpbotron /> */}
-      </main>
-    </div>
+      </div>
+      <Jumpbotron />
+    </>
   );
 }
