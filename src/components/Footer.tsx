@@ -102,7 +102,7 @@ export function Footer({ ...props }: FooterProps) {
             <input
               type="email"
               placeholder={t("footer.enter-your-email")}
-              className="rounded-lg px-4 py-3 text-lg text-black placeholder:text-primary"
+              className="rounded-lg px-4 py-3 text-lg text-secondary placeholder:text-primary"
               ref={emailRef}
             />
             <Button

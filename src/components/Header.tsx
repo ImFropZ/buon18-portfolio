@@ -11,7 +11,7 @@ export function Header(props: HeaderProps) {
     <header
       {...props}
       className={cn(
-        "fixed top-0 z-20 flex w-full flex-col bg-black/20 p-4 font-medium text-white backdrop-blur-lg",
+        "fixed top-0 z-20 flex w-full flex-col bg-secondary/20 p-4 font-medium text-white backdrop-blur-lg",
         props.className,
       )}
       id="header"

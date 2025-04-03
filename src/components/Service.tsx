@@ -16,7 +16,7 @@ function ServiceItem(props: ServiceItemProps) {
         className="_border-gradient absolute inset-0 -z-10 rounded-xl xl:data-[large=true]:-bottom-12 xl:data-[large=true]:-top-12"
         data-large={props.large ? "true" : "false"}
       ></div>
-      <div className="w-fit rounded-full bg-primary p-3 text-black">
+      <div className="w-fit rounded-full bg-primary p-3 text-secondary">
         <div className="h-8 w-8 [&>svg]:h-full [&>svg]:w-full">
           {props.icon}
         </div>

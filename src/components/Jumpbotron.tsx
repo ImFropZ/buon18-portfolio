@@ -23,7 +23,7 @@ export function Jumpbotron() {
               </Button>
             </Link>
             <Link href="/about">
-              <Button className="flex gap-2 rounded-lg border border-secondary px-5 py-3 text-black">
+              <Button className="flex gap-2 rounded-lg border border-secondary px-5 py-3 text-secondary">
                 <span>Learn more</span>
               </Button>
             </Link>

@@ -33,7 +33,10 @@ function WorkItem({ work, className, ...props }: WorkCardProps) {
         />
       </div>
       <div className="relative p-5">
-        <Title size={3} className="text-center text-2xl font-bold text-black">
+        <Title
+          size={3}
+          className="text-center text-2xl font-bold text-secondary"
+        >
           {t(`about.our-work.work.${work.translateKey}.title`)}
         </Title>
         <p className="mx-auto mt-5 w-[90%] text-center text-gray-500">

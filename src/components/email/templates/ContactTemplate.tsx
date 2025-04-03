@@ -41,13 +41,13 @@ export function ContactTemplate({
                 className="mx-auto my-0"
               />
             </Section>
-            <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-black">
+            <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-secondary">
               We go a new email from <strong>{name}</strong>
             </Heading>
-            <Text className="text-[14px] leading-[24px] text-black">
+            <Text className="text-[14px] leading-[24px] text-secondary">
               Hello <strong>Buon18</strong>,
             </Text>
-            <Text className="text-[14px] leading-[24px] text-black">
+            <Text className="text-[14px] leading-[24px] text-secondary">
               <strong>{name}</strong> (
               <Link
                 href={`mailto:${email}`}

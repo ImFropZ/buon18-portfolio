@@ -43,7 +43,7 @@ export function Menu() {
         />
       </ClientPortal>
       <nav
-        className="absolute right-0 top-0 z-50 grid h-screen w-3/4 max-w-96 flex-1 grid-rows-[auto,1fr] justify-end gap-2 bg-black/30 p-8 pr-20 backdrop-blur-2xl transition-all duration-500 data-[open=false]:translate-x-full xl:static xl:h-fit xl:max-w-max xl:bg-transparent xl:p-0 xl:backdrop-blur-none xl:data-[open=false]:translate-x-0"
+        className="absolute right-0 top-0 z-50 grid h-screen w-3/4 max-w-96 flex-1 grid-rows-[auto,1fr] justify-end gap-2 bg-secondary p-8 pr-20 transition-all duration-500 data-[open=false]:translate-x-full xl:static xl:h-fit xl:max-w-max xl:bg-transparent xl:p-0 xl:backdrop-blur-none xl:data-[open=false]:translate-x-0"
         data-open={open}
       >
         <X
