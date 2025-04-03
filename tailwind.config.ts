@@ -17,7 +17,7 @@ const config: Config = {
         "primary-light": "#6CF",
       },
       fontFamily: {
-        primary: ["Hanuman", "Gotham", "sans-serif"],
+        primary: ["Kantumruy Pro", "CabinetGrotesk", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

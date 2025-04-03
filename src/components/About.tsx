@@ -36,7 +36,7 @@ export function About() {
             height={548}
             alt="about us image"
             className="absolute inset-0 ml-auto h-full"
-            priority={false}
+            priority={true}
           ></Image>
         </div>
       </div>
