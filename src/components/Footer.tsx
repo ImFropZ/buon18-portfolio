@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { cn } from "./utils";
 import React from "react";
 import { Button, Title } from "./base";
@@ -8,6 +7,40 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { toast } from "react-toastify";
+import { Facebook, GitHub, LinkedIn, TikTok, YouTube } from "./icons";
+
+const MEDIAS = [
+  {
+    href: "https://www.github.com/buon18",
+    icon: (
+      <GitHub className="h-8 w-8 transition-colors duration-300 hover:fill-primary" />
+    ),
+  },
+  {
+    href: "https://www.facebook.com/buon18.kh",
+    icon: (
+      <Facebook className="h-8 w-8 transition-colors duration-300 hover:fill-primary" />
+    ),
+  },
+  {
+    href: "https://www.youtube.com/@buon18-tech?sub_confirmation=1",
+    icon: (
+      <YouTube className="h-8 w-8 transition-colors duration-300 hover:fill-primary" />
+    ),
+  },
+  {
+    href: "#",
+    icon: (
+      <TikTok className="h-8 w-8 transition-colors duration-300 hover:fill-primary" />
+    ),
+  },
+  {
+    href: "https://www.linkedin.com/company/buon18",
+    icon: (
+      <LinkedIn className="h-8 w-8 transition-colors duration-300 hover:fill-primary" />
+    ),
+  },
+];
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -45,52 +78,13 @@ export function Footer({ ...props }: FooterProps) {
             </Title>
             <p className="text-sm text-gray-200">{t("footer.description")}</p>
             <div className="flex gap-2">
-              <Link href={"https://www.github.com/buon18"} target="_blank">
-                <Image
-                  src="/images/github.svg"
-                  alt="github"
-                  width={32}
-                  height={32}
-                />
-              </Link>
-              <Link href={"https://www.facebook.com/buon18.kh"} target="_blank">
-                <Image
-                  src="/images/facebook.svg"
-                  alt="facebook"
-                  width={32}
-                  height={32}
-                />
-              </Link>
-              <Link
-                href={"https://www.youtube.com/@buon18-tech?sub_confirmation=1"}
-                target="_blank"
-              >
-                <Image
-                  src="/images/youtube.svg"
-                  alt="youtube"
-                  width={32}
-                  height={32}
-                />
-              </Link>
-              <Link href={"#"} target="_blank">
-                <Image
-                  src="/images/tiktok.svg"
-                  alt="tiktok"
-                  width={32}
-                  height={32}
-                />
-              </Link>
-              <Link
-                href={"https://www.linkedin.com/company/buon18"}
-                target="_blank"
-              >
-                <Image
-                  src="/images/linkedin.svg"
-                  alt="linkedin"
-                  width={32}
-                  height={32}
-                />
-              </Link>
+              {MEDIAS.map((m, i) => {
+                return (
+                  <Link href={m.href} target="_blank" key={i}>
+                    {m.icon}
+                  </Link>
+                );
+              })}
             </div>
           </div>
           <div className="flex flex-col gap-4">
