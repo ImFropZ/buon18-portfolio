@@ -2,11 +2,10 @@
 
 import { cn } from "./utils";
 import React from "react";
-import { Button, Title } from "./base";
-import { ArrowRight } from "lucide-react";
+import { Title } from "./base";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { toast } from "react-toastify";
 import { Facebook, GitHub, LinkedIn, TikTok, YouTube } from "./icons";
 
 const MEDIAS = [
@@ -69,13 +68,9 @@ export function Footer({ ...props }: FooterProps) {
           props.className,
         )}
       >
-        <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-20 lg:grid-cols-3">
           <div className="flex flex-col gap-6">
-            <Title className="text-4xl text-white">
-              {t("footer.title-1")}
-              <br />
-              {t("footer.title-2")}
-            </Title>
+            <Title className="text-4xl text-white">Buon18</Title>
             <p className="text-sm text-gray-200">{t("footer.description")}</p>
             <div className="flex gap-2">
               {MEDIAS.map((m, i) => {
@@ -87,58 +82,48 @@ export function Footer({ ...props }: FooterProps) {
               })}
             </div>
           </div>
+          <div className="space-y-4">
+            <Title className="text-4xl text-white">Company</Title>
+            <ul className="text-lg font-medium">
+              <li className="hover:text-primary">
+                <Link href="/">Home</Link>
+              </li>
+              <li className="hover:text-primary">
+                <Link href="/about">About Us</Link>
+              </li>
+              <li className="hover:text-primary">
+                <Link href="/blogs">Blogs</Link>
+              </li>
+              <li className="hover:text-primary">
+                <Link href="/services">Our Service</Link>
+              </li>
+            </ul>
+          </div>
           <div className="flex flex-col gap-4">
-            <Title
-              size={3}
-              className="text-4xl text-white"
-              translateKey="footer.keep-in-touch"
-            />
-            <input
-              type="email"
-              placeholder={t("footer.enter-your-email")}
-              className="rounded-lg px-4 py-3 text-lg text-secondary placeholder:text-primary"
-              ref={emailRef}
-            />
-            <Button
-              className="flex h-fit w-fit items-center gap-2 rounded-lg bg-primary px-8 py-4 font-medium text-white outline-none"
-              onClick={() => {
-                if (emailRef.current != null) {
-                  if (isValidEmail(emailRef.current.value)) {
-                    onSubscribeHandler(emailRef.current.value)
-                      .then((res) => res.json())
-                      .then((data) => {
-                        if (data.id) {
-                          toast.success("Subscribed successfully", {
-                            autoClose: 2000,
-                            position: "top-right",
-                          });
-                          if (emailRef.current) emailRef.current.value = "";
-                        }
-
-                        if (data.error) {
-                          toast.error(data.error, {
-                            autoClose: 2000,
-                            position: "top-right",
-                          });
-                        }
-                      });
-                  } else {
-                    toast.error("Invalid email", {
-                      autoClose: 2000,
-                      position: "top-right",
-                    });
-                  }
-                }
-              }}
-            >
-              <p>{t("footer.subscribe")}</p>
-              <ArrowRight />
-            </Button>
+            <Title className="text-4xl text-white">Contact</Title>
+            <div className="flex gap-2">
+              <Phone className="text-primary" />
+              <Link href="tel:+855764184185" target="_blank">
+                +855(0) 76 418 4185
+              </Link>
+            </div>
+            <div className="flex gap-2">
+              <Mail className="text-primary" />
+              <Link href="mailto:buon18kh@gmail.com" target="_blank">
+                buon18kh@gmail.com
+              </Link>
+            </div>
           </div>
         </div>
-        <p className="mx-auto my-8 text-sm font-normal leading-5 tracking-wide text-gray-200">
-          @Copyright {new Date().getFullYear()} All rights reserved - Buon18
-        </p>
+        <div className="mx-auto mt-10 text-sm font-normal leading-5 tracking-wide text-gray-200">
+          <p>
+            @Copyright {new Date().getFullYear()} All rights reserved - Buon18
+          </p>
+          <div className="mx-auto mt-4 flex w-fit gap-2 underline">
+            <Link href="#">Privacy Policy</Link>
+            <Link href="#">Term of Service</Link>
+          </div>
+        </div>
       </div>
     </div>
   );
