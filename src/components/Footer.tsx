@@ -85,17 +85,25 @@ export function Footer({ ...props }: FooterProps) {
           <div className="space-y-4">
             <Title className="text-4xl text-white">Company</Title>
             <ul className="text-lg font-medium">
-              <li className="hover:text-primary">
-                <Link href="/">Home</Link>
+              <li>
+                <Link href="/" className="hover:text-primary">
+                  Home
+                </Link>
               </li>
-              <li className="hover:text-primary">
-                <Link href="/about">About Us</Link>
+              <li>
+                <Link href="/about" className="hover:text-primary">
+                  About Us
+                </Link>
               </li>
-              <li className="hover:text-primary">
-                <Link href="/blogs">Blogs</Link>
+              <li>
+                <Link href="/blogs" className="hover:text-primary">
+                  Blogs
+                </Link>
               </li>
-              <li className="hover:text-primary">
-                <Link href="/services">Our Service</Link>
+              <li>
+                <Link href="/services" className="hover:text-primary">
+                  Our Service
+                </Link>
               </li>
             </ul>
           </div>
