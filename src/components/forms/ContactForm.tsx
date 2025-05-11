@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  InputFormField,
-  SelectFormField,
-  TextareaFormField,
-} from "./form-fields";
+import { InputFormField, SelectFormField } from "./form-fields";
 import { Button } from "@/components/base";
 import { cn } from "@/components/utils";
 import { Send } from "lucide-react";
@@ -16,7 +12,6 @@ import { ContactTemplate } from "@/components/email";
 import { toast } from "react-toastify";
 import React from "react";
 import * as z from "zod";
-import { useTranslations } from "next-intl";
 
 async function onSend(data: z.infer<typeof contactSchema>) {
   return await fetch("/api/send-mail", {
@@ -38,7 +33,6 @@ async function onSend(data: z.infer<typeof contactSchema>) {
 interface ContactFormProps extends React.FormHTMLAttributes<HTMLFormElement> {}
 
 export function ContactForm({ ...props }: ContactFormProps) {
-  const t = useTranslations();
   const [buttonDisable, setButtonDisable] = React.useState(false);
 
   const form = useForm({
