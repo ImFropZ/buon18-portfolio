@@ -4,6 +4,7 @@ import { Title } from "@/components/base";
 import { SERVICES } from "@/data";
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Link from "next/link";
 
 function ServiceItem(props: (typeof SERVICES)[number]) {
   return (
@@ -95,6 +96,23 @@ export default function Services() {
           your goals and deliver results. Let us help you build the future of
           your business!
         </p>
+
+        <div className="mt-10 grid grid-rows-2 items-center gap-4 rounded-2xl border border-primary bg-gradient-to-b from-primary to-primary/10 p-6 lg:grid-cols-3 lg:grid-rows-1 lg:p-12">
+          <div className="lg:col-span-2">
+            <Title className="text-center text-2xl md:text-4xl lg:text-start xl:text-7xl">
+              Bring Your Business <br /> Online with Buon18
+            </Title>
+            <p className="text-center lg:text-start lg:text-xl">
+              Custom IT Solutions Designed for Cambodian Businesses
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="mx-auto w-fit rounded-full bg-white px-16 py-2 text-primary transition-colors hover:bg-primary hover:text-white lg:text-xl"
+          >
+            Start now
+          </Link>
+        </div>
       </div>
     </>
   );
