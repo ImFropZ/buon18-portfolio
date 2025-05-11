@@ -12,9 +12,10 @@ interface InputFormFieldProps extends React.HTMLAttributes<HTMLDivElement> {
   placeholder?: string;
   field: ControllerRenderProps<any, any>; // Using any for FieldValues
   errorField?: FieldError | Merge<FieldError, FieldErrorsImpl<any>>;
+  options: { label: string; value: string }[];
 }
 
-export const InputFormField = React.forwardRef<
+export const SelectFormField = React.forwardRef<
   HTMLInputElement,
   InputFormFieldProps
 >(({ label, placeholder, field, errorField, ...props }, _) => {
@@ -26,14 +27,25 @@ export const InputFormField = React.forwardRef<
           {errorField?.message?.toString()}
         </p>
       </div>
-      <input
-        {...field}
-        className="border-b-[2px] bg-transparent p-1 outline outline-2 outline-transparent data-[error=true]:outline-red-500"
-        data-error={!!errorField}
-        placeholder={placeholder}
-      />
+      <div className="flex gap-2">
+        {props.options.map((o) => {
+          return (
+            <div className="flex gap-2 text-sm" key={o.value}>
+              <input
+                {...field}
+                className="border-b-[2px] bg-transparent p-3 outline outline-2 outline-transparent data-[error=true]:outline-red-500"
+                data-error={!!errorField}
+                placeholder={placeholder}
+                type="radio"
+                value={o.value}
+              />
+              <label>{o.label}</label>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 });
 
-InputFormField.displayName = "InputFormField";
+SelectFormField.displayName = "SelectFormField";

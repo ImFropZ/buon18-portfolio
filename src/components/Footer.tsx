@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Facebook, GitHub, LinkedIn, TikTok, YouTube } from "./icons";
 
-const MEDIAS = [
+export const MEDIAS = [
   {
     href: "https://www.github.com/buon18",
     icon: (
@@ -44,20 +44,7 @@ const MEDIAS = [
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function Footer({ ...props }: FooterProps) {
-  const emailRef = React.useRef<null | HTMLInputElement>(null);
   const t = useTranslations();
-
-  const onSubscribeHandler = (email: string) => {
-    return fetch("/api/subscribe", {
-      method: "POST",
-      body: JSON.stringify({ email }),
-    });
-  };
-
-  const isValidEmail = (email: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
 
   return (
     <div className="mt-auto">

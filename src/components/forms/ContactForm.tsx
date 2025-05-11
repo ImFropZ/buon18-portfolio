@@ -1,6 +1,10 @@
 "use client";
 
-import { InputFormField, TextareaFormField } from "./form-fields";
+import {
+  InputFormField,
+  SelectFormField,
+  TextareaFormField,
+} from "./form-fields";
 import { Button } from "@/components/base";
 import { cn } from "@/components/utils";
 import { Send } from "lucide-react";
@@ -20,8 +24,13 @@ async function onSend(data: z.infer<typeof contactSchema>) {
     body: JSON.stringify({
       from: "Buon18 Portfolio",
       to: (process.env.NEXT_PUBLIC_RECEIVER_EMAILS || "").split(","),
-      subject: data.subject,
-      html: render(ContactTemplate({ ...data })),
+      subject: data.service,
+      html: render(
+        ContactTemplate({
+          ...data,
+          name: data.first_name + " " + data.last_name,
+        }),
+      ),
     }),
   });
 }
@@ -35,93 +44,146 @@ export function ContactForm({ ...props }: ContactFormProps) {
   const form = useForm({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      name: "",
+      first_name: "",
+      last_name: "",
       email: "",
-      subject: "",
+      phone_number: "",
+      service: "",
       message: "",
     },
   });
 
   return (
-    <form
-      {...props}
-      className={cn(props.className)}
-      onSubmit={form.handleSubmit((data) => {
-        toast
-          .promise(onSend(data), {
-            pending: "Sending...",
-            success: "Email sent successfully! We'll get back to you soon.",
-            error:
-              "Failed to send email! Please contact us using other method.",
-          })
-          .then(() => {
-            form.reset();
-          })
-          .finally(() => {
-            setButtonDisable(false);
-          });
-      }, console.log)}
-    >
-      <Controller
-        name="name"
-        control={form.control}
-        render={({ field }) => {
-          return (
-            <InputFormField
-              field={field}
-              errorField={form.formState.errors.name}
-              label={t("contact.form.name")}
-            />
-          );
-        }}
-      />
-      <Controller
-        name="email"
-        control={form.control}
-        render={({ field }) => {
-          return (
-            <InputFormField
-              field={field}
-              errorField={form.formState.errors.email}
-              label={t("contact.form.email")}
-            />
-          );
-        }}
-      />
-      <Controller
-        name="subject"
-        control={form.control}
-        render={({ field }) => {
-          return (
-            <InputFormField
-              field={field}
-              errorField={form.formState.errors.subject}
-              label={t("contact.form.subject")}
-            />
-          );
-        }}
-      />
-      <Controller
-        name="message"
-        control={form.control}
-        render={({ field }) => {
-          return (
-            <TextareaFormField
-              field={field}
-              errorField={form.formState.errors.message}
-              label={t("contact.form.message")}
-              placeholder={t("contact.form.message-placeholder")}
-            />
-          );
-        }}
-      />
-      <Button
-        className="relative rounded-lg bg-primary p-3 text-gray-50"
-        disabled={buttonDisable}
+    <>
+      <h2 className="text-xl font-bold text-primary">
+        We would like to hear from you
+      </h2>
+      <form
+        {...props}
+        className={cn("grid grid-cols-2 gap-6 pt-4", props.className)}
+        onSubmit={form.handleSubmit((data) => {
+          toast
+            .promise(onSend(data), {
+              pending: "Sending...",
+              success: "Email sent successfully! We'll get back to you soon.",
+              error:
+                "Failed to send email! Please contact us using other method.",
+            })
+            .then(() => {
+              form.reset();
+            })
+            .finally(() => {
+              setButtonDisable(false);
+            });
+        }, console.error)}
       >
-        <span>{t("contact.form.send")}</span>
-        <Send className="absolute right-4 top-1/2 -translate-y-1/2" />
-      </Button>
-    </form>
+        <Controller
+          name="first_name"
+          control={form.control}
+          render={({ field }) => {
+            return (
+              <InputFormField
+                field={field}
+                errorField={form.formState.errors.first_name}
+                label="First name"
+              />
+            );
+          }}
+        />
+        <Controller
+          name="last_name"
+          control={form.control}
+          render={({ field }) => {
+            return (
+              <InputFormField
+                field={field}
+                errorField={form.formState.errors.last_name}
+                label="Last name"
+              />
+            );
+          }}
+        />
+        <Controller
+          name="email"
+          control={form.control}
+          render={({ field }) => {
+            return (
+              <InputFormField
+                field={field}
+                errorField={form.formState.errors.email}
+                label="Email"
+              />
+            );
+          }}
+        />
+        <Controller
+          name="phone_number"
+          control={form.control}
+          render={({ field }) => {
+            return (
+              <InputFormField
+                field={field}
+                errorField={form.formState.errors.phone_number}
+                label="Phone number"
+              />
+            );
+          }}
+        />
+        <Controller
+          name="service"
+          control={form.control}
+          render={({ field }) => {
+            return (
+              <SelectFormField
+                className="col-span-2"
+                field={field}
+                errorField={form.formState.errors.service}
+                label="Service"
+                options={[
+                  {
+                    label: "Web Development",
+                    value: "web-development",
+                  },
+                  {
+                    label: "POS System Development",
+                    value: "pos-system-development",
+                  },
+                  {
+                    label: "UX/UI Design",
+                    value: "ux-ui-design",
+                  },
+                  {
+                    label: "Graphic Design",
+                    value: "graphic-design",
+                  },
+                ]}
+              />
+            );
+          }}
+        />
+        <Controller
+          name="message"
+          control={form.control}
+          render={({ field }) => {
+            return (
+              <InputFormField
+                className="col-span-2"
+                field={field}
+                errorField={form.formState.errors.message}
+                label="Message"
+                placeholder="Write your message ..."
+              />
+            );
+          }}
+        />
+        <Button
+          className="relative col-[2_/_span_1] rounded-lg bg-white p-3 text-primary transition-colors hover:bg-primary hover:text-white"
+          disabled={buttonDisable}
+        >
+          <span className="font-bold">Send Message</span>
+          <Send className="absolute right-4 top-1/2 -translate-y-1/2" />
+        </Button>
+      </form>
+    </>
   );
 }
