@@ -54,7 +54,7 @@ export function BlogCard({
         </p>
         <Link
           href={href || "#"}
-          className="mt-auto flex w-fit gap-2 rounded-lg bg-primary px-5 py-2 text-secondary outline-none hover:bg-primary"
+          className="mt-auto flex w-36 gap-2 rounded-lg bg-primary px-4 py-2 text-center text-secondary outline-none transition-all hover:w-full hover:bg-primary"
         >
           <span>{t("blog.card.read-more")}</span>
           <ArrowRight />

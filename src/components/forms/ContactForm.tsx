@@ -171,11 +171,10 @@ export function ContactForm({ ...props }: ContactFormProps) {
           }}
         />
         <Button
-          className="relative col-[2_/_span_1] rounded-lg bg-white p-3 text-primary transition-colors hover:bg-primary hover:text-white"
+          className="relative col-[2_/_span_1] ml-auto w-fit rounded-lg bg-primary p-3 px-6 text-black transition-colors hover:bg-primary hover:text-white"
           disabled={buttonDisable}
         >
           <span className="font-bold">Send Message</span>
-          <Send className="absolute right-4 top-1/2 -translate-y-1/2" />
         </Button>
       </form>
     </>

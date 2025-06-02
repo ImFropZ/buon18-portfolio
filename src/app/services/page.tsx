@@ -5,6 +5,10 @@ import { SERVICES } from "@/data";
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
+import { ArrowRight, Triangle } from "lucide-react";
+import Image from "next/image";
+import { AnimatePresence, motion } from "motion/react";
+import { cn } from "@/components/utils";
 
 function ServiceItem(props: (typeof SERVICES)[number]) {
   return (
@@ -59,6 +63,50 @@ function ServiceItem(props: (typeof SERVICES)[number]) {
   );
 }
 
+interface CollapsibleItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  title: string;
+  description: string;
+  toggleCollapsible: () => void;
+  open: boolean;
+}
+
+function CollapsibleItem(props: CollapsibleItemProps) {
+  return (
+    <div
+      {...props}
+      data-open={props.open}
+      className={cn(
+        "relative space-y-8 rounded-3xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10 backdrop-blur",
+        props.className,
+      )}
+      onClick={props.toggleCollapsible}
+    >
+      <h2 className="max-w-[26rem] text-2xl font-medium capitalize text-primary">
+        {props.title}
+      </h2>
+      <Triangle
+        className="absolute right-10 top-6 rotate-90 fill-pink-50 stroke-pink-50 transition-transform data-[open=true]:rotate-180"
+        size={16}
+        strokeWidth={4}
+        data-open={props.open}
+      />
+      <AnimatePresence>
+        {props.open && (
+          <motion.p
+            key="modal"
+            className="capitalize"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {props.description}
+          </motion.p>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export default function Services() {
   const [emblaRef, emblaApi] = useEmblaCarousel({});
 
@@ -66,6 +114,22 @@ export default function Services() {
     if (!emblaApi) return;
     emblaApi.scrollTo(1);
   }, [emblaApi]);
+
+  const [collapsibleState, setCollapsibleState] = React.useState([
+    true,
+    false,
+    false,
+    false,
+  ]);
+
+  const toggleCollapsible = (toggleIndex: number) => {
+    if (toggleIndex > 3 || toggleIndex < 0) return;
+    setCollapsibleState((prev) => {
+      const state = [false, false, false, false];
+      state[toggleIndex] = !prev[toggleIndex];
+      return state;
+    });
+  };
 
   return (
     <>
@@ -99,19 +163,78 @@ export default function Services() {
 
         <div className="mt-10 grid grid-rows-2 items-center gap-4 rounded-2xl border border-primary bg-gradient-to-b from-primary to-primary/10 p-6 lg:grid-cols-3 lg:grid-rows-1 lg:p-12">
           <div className="lg:col-span-2">
-            <Title className="text-center text-2xl md:text-4xl lg:text-start xl:text-7xl">
-              Bring Your Business <br /> Online with Buon18
+            <Title className="text-6xl">
+              Bring Your Business Online <br /> with Buon18
             </Title>
-            <p className="text-center lg:text-start lg:text-xl">
+            <p className="mt-6 text-center lg:text-start lg:text-xl">
               Custom IT Solutions Designed for Cambodian Businesses
             </p>
           </div>
           <Link
             href="/contact"
-            className="mx-auto w-fit rounded-full bg-white px-16 py-2 text-primary transition-colors hover:bg-primary hover:text-white lg:text-xl"
+            prefetch={true}
+            className="mx-auto flex w-fit items-center gap-2 rounded-xl bg-black px-16 py-3 text-xl font-medium text-primary transition-colors"
           >
-            Start now
+            <span>Start now</span>
+            <ArrowRight />
           </Link>
+        </div>
+
+        <div className="mt-20 grid grid-cols-2 gap-20">
+          <div className="space-y-8">
+            <h1 className="text-[4rem] font-medium">
+              Got Questions? <br />
+              We&apos;ve Got Answers.
+            </h1>
+            <div className="flex flex-col gap-4">
+              <CollapsibleItem
+                title="Do you offer ready-made or custom websites?"
+                description="Both. Choose a template or go fully custom — your call."
+                toggleCollapsible={() => toggleCollapsible(0)}
+                open={collapsibleState[0]}
+              />
+              <CollapsibleItem
+                title="How long does a project take?"
+                description=""
+                toggleCollapsible={() => toggleCollapsible(1)}
+                open={collapsibleState[1]}
+              />
+              <CollapsibleItem
+                title="How do I start?"
+                description=""
+                toggleCollapsible={() => toggleCollapsible(2)}
+                open={collapsibleState[2]}
+              />
+              <CollapsibleItem
+                title="Can I customize the POS system?"
+                description=""
+                toggleCollapsible={() => toggleCollapsible(3)}
+                open={collapsibleState[3]}
+              />
+            </div>
+          </div>
+          <div>
+            <p className="w-[32rem] text-xl capitalize">
+              Here are some quick answers to the most common questions about our
+              services — from development to design and everything in between.
+            </p>
+            <div className="relative mt-40 p-20">
+              <Image
+                src="/question-marks.svg"
+                alt=""
+                width={489}
+                height={388}
+                className="scale-125"
+              />
+              <div
+                className="absolute left-1/2 top-1/2 -z-10 h-[30rem] w-[60rem] -translate-x-1/2 -translate-y-1/2 opacity-50"
+                style={{
+                  background:
+                    "radial-gradient(40.91% 48.08% at 47.78% 47.9%, rgba(152, 203, 51, 0.45) 0%, rgba(0, 0, 0, 0.00) 100%)",
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>

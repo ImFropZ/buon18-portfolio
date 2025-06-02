@@ -11,3 +11,4 @@ export * from "./Hero";
 export * from "./Jumpbotron";
 export * from "./Technology";
 export * from "./Work";
+export * from "./Project";

@@ -73,22 +73,34 @@ export function Footer({ ...props }: FooterProps) {
             <Title className="text-4xl text-white">Company</Title>
             <ul className="text-lg font-medium">
               <li>
-                <Link href="/" className="hover:text-primary">
+                <Link href="/" prefetch={true} className="hover:text-primary">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-primary">
+                <Link
+                  href="/about"
+                  prefetch={true}
+                  className="hover:text-primary"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/blogs" className="hover:text-primary">
+                <Link
+                  href="/blogs"
+                  prefetch={true}
+                  className="hover:text-primary"
+                >
                   Blogs
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary">
+                <Link
+                  href="/services"
+                  prefetch={true}
+                  className="hover:text-primary"
+                >
                   Our Service
                 </Link>
               </li>

@@ -18,6 +18,7 @@ const config: Config = {
       },
       fontFamily: {
         primary: ["Kantumruy Pro", "CabinetGrotesk", "sans-serif"],
+        poppins: ["Poppins", "CabinetGrotesk", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

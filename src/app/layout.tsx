@@ -27,9 +27,8 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <link rel="preload" href="/images/about-blur.jpg" as="image" />
-      <link rel="preload" href="/images/hero-bg.gif" as="video" />
-      <body className="min-h-screen font-primary">
+      <link rel="preload" href="/hero-buon18.png" as="image" />
+      <body className="overflow-x-hidden font-primary">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
