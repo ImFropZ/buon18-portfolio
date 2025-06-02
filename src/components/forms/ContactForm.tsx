@@ -3,7 +3,6 @@
 import { InputFormField, SelectFormField } from "./form-fields";
 import { Button } from "@/components/base";
 import { cn } from "@/components/utils";
-import { Send } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema } from "@/models";

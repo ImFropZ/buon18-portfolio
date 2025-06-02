@@ -10,7 +10,7 @@ export default function Home() {
         <Project />
         <Blog />
       </div>
-      {/* <Jumpbotron /> */}
+      <Jumpbotron />
     </>
   );
 }
