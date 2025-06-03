@@ -39,7 +39,7 @@ function ServiceItem(props: ServiceItemProps) {
       {props.large && (
         <Link
           href={"/services"}
-          className="mt-4 flex flex-1 items-end justify-between rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-10 py-4 text-2xl font-light backdrop-blur"
+          className="mt-4 hidden flex-1 items-end justify-between rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-10 py-4 text-2xl font-light backdrop-blur md:flex"
         >
           <p>
             Explore our <br />
@@ -72,6 +72,16 @@ export function Service() {
           title="Design"
           description="Intuitive, user-friendly interfaces designed to improve user engagement and create a smooth digital experience."
         />
+        <Link
+          href={"/services"}
+          className="mt-4 flex w-full flex-1 items-end justify-between rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-10 py-4 text-2xl font-light backdrop-blur md:hidden"
+        >
+          <p>
+            Explore our <br />
+            Services
+          </p>
+          <ArrowRight />
+        </Link>
       </div>
     </section>
   );

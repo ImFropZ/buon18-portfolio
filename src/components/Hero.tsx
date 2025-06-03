@@ -80,7 +80,7 @@ export function Hero(props: HeroProps) {
 
         <Link
           href={"/about"}
-          className="rounded-lg border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-16 py-6 text-2xl backdrop-blur xl:self-end"
+          className="rounded-lg border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-16 py-6 text-center text-2xl backdrop-blur xl:self-end"
         >
           Get Started
         </Link>
