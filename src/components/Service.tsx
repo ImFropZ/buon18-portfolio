@@ -14,15 +14,15 @@ interface ServiceItemProps {
 
 function ServiceItem(props: ServiceItemProps) {
   return (
-    <div className="relative flex flex-1 flex-col p-8">
+    <div className="relative flex w-full flex-1 flex-col xl:p-8">
       <div className="group relative flex h-[28rem] flex-col items-center overflow-hidden rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10 backdrop-blur">
         <motion.div
           key={"sheen"}
-          initial={{ translateX: "-32rem", rotate: "45deg" }}
-          animate={{ translateX: "32rem", rotate: "45deg" }}
+          initial={{ translateX: "-44rem", rotate: "45deg" }}
+          animate={{ translateX: "44rem", rotate: "45deg" }}
           className="absolute -bottom-1/2 -top-1/2 w-12 bg-gradient-to-r from-white/0 to-white/10 duration-500 ease-linear"
         ></motion.div>
-        <div className="w-fit rounded-full bg-primary p-3 text-secondary">
+        <div className="rounded-full bg-primary p-3 text-secondary">
           <div className="h-8 w-8 [&>svg]:h-full [&>svg]:w-full">
             {props.icon}
           </div>
@@ -55,7 +55,7 @@ function ServiceItem(props: ServiceItemProps) {
 export function Service() {
   return (
     <section className="my-10">
-      <div className="flex items-end justify-center">
+      <div className="flex flex-col items-end justify-center gap-4 lg:flex-row xl:gap-0">
         <ServiceItem
           icon={<Settings />}
           title="POS & In-House Systems"

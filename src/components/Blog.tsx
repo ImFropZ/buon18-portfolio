@@ -70,9 +70,9 @@ export function Blog() {
   const t = useTranslations();
 
   return (
-    <section className="my-10">
+    <section className="lg:my-10">
       <Title
-        className="mt-10 text-5xl text-primary md:mb-10"
+        className="mt-10 text-3xl text-primary md:mb-10 xl:text-5xl"
         translateKey="blog.lastest"
       />
       {/* NOTE: Mobile View only */}

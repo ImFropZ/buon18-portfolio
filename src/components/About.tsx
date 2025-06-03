@@ -6,8 +6,8 @@ import React from "react";
 export function About() {
   return (
     <section className="my-10" id="about-section">
-      <div className="flex flex-col-reverse gap-60 md:flex-row">
-        <div className="relative">
+      <div className="flex flex-col-reverse gap-20 md:flex-row xl:gap-60">
+        <div className="relative hidden md:block">
           <Image
             src="/person.png"
             width={311}
@@ -26,11 +26,11 @@ export function About() {
         </div>
         <div className="flex flex-1 flex-col flex-wrap gap-8">
           <h1 className="tracking-[0.3rem] text-zinc-300">ABOUT US</h1>
-          <h2 className="text-5xl leading-[130%] text-gray-100">
+          <h2 className="text-2xl leading-[130%] text-gray-100 xl:text-5xl">
             At Buon18, we build fast, smart, and scalable solutions to power
             your business forward.
           </h2>
-          <div className="text-2xl leading-[130%] text-gray-100">
+          <div className="leading-[130%] text-gray-100 xl:text-2xl">
             In a world where technology evolves daily, our team moves quickly to
             develop custom systems that solve real business problems.
           </div>

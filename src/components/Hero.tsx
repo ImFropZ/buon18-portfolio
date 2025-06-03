@@ -15,17 +15,17 @@ export function Hero(props: HeroProps) {
   return (
     <section
       {...props}
-      className={cn("w-full overflow-hidden py-24", props.className)}
+      className={cn("w-full overflow-hidden pt-24 xl:py-24", props.className)}
     >
       <HeroBackground />
 
       <motion.h1
         initial={{ opacity: 0.4 }}
         animate={{ opacity: 1, transition: { duration: 0.3 } }}
-        className="mt-6 w-full max-w-[60ch] text-nowrap text-[11.8rem] font-extrabold leading-tight"
+        className="mt-6 w-full max-w-[60ch] text-nowrap text-[14vw] font-extrabold leading-tight xl:text-[11.8rem]"
         style={{
           backgroundImage:
-            "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.00) 100%)",
+            "linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.2) 100%)",
           backgroundClip: "text",
           WebkitBackgroundClip: "text",
           color: "transparent",
@@ -33,7 +33,7 @@ export function Hero(props: HeroProps) {
       >
         WELCOME TO
       </motion.h1>
-      <div className="flex items-end gap-6">
+      <div className="flex flex-col items-end gap-6 xl:flex-row">
         <motion.img
           initial={{ opacity: 0.2 }}
           animate={{ opacity: 1, transition: { duration: 0.3, delay: 0.3 } }}
@@ -46,7 +46,7 @@ export function Hero(props: HeroProps) {
         <motion.p
           initial={{ opacity: 0.4 }}
           animate={{ opacity: 1, transition: { duration: 0.3, delay: 0.5 } }}
-          className="max-w-md text-2xl leading-none"
+          className="max-w-md text-lg leading-none xl:text-2xl"
         >
           In a world where everything is becoming digital, we strive to lighten
           the workload of businesses by offering seamless, reliable, and
@@ -54,13 +54,13 @@ export function Hero(props: HeroProps) {
         </motion.p>
       </div>
 
-      <div className="mt-16 flex items-end justify-between gap-4">
+      <div className="mt-16 flex flex-col justify-between gap-4 xl:flex-row">
         <div className="flex flex-col">
-          <h2 className="text-4xl">
-            YOUR PARTNER IN IT <br />
+          <h2 className="text-2xl xl:text-4xl">
+            YOUR PARTNER IN IT <br className="hidden xl:block" />
             SOULUTION
           </h2>
-          <div className="ml-6 mt-7 flex gap-60">
+          <div className="ml-6 mt-7 flex gap-20 xl:gap-60">
             <div className="flex flex-col gap-4">
               <p className="relative text-white/60 before:absolute before:right-[calc(100%+0.5rem)] before:top-1/2 before:h-2 before:w-2 before:-translate-y-1/2 before:content-normal before:rounded-full before:bg-white">
                 Reliable Team
@@ -80,7 +80,7 @@ export function Hero(props: HeroProps) {
 
         <Link
           href={"/about"}
-          className="rounded-lg border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-16 py-6 text-2xl backdrop-blur"
+          className="rounded-lg border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-16 py-6 text-2xl backdrop-blur xl:self-end"
         >
           Get Started
         </Link>
