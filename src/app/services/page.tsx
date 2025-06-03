@@ -13,7 +13,7 @@ import { cn } from "@/components/utils";
 function ServiceItem(props: (typeof SERVICES)[number]) {
   return (
     <div
-      className="after:_border-gradient relative flex-[0_0_100%] overflow-hidden rounded-2xl p-8 after:absolute after:inset-0 after:-z-20 after:content-normal after:rounded-2xl after:border-2 after:border-[2px_solid_transparent] xl:flex-1"
+      className="after:_border-gradient relative flex-[0_0_100%] overflow-hidden rounded-2xl p-8 after:absolute after:inset-0 after:-z-20 after:content-normal after:rounded-2xl after:border-2 after:border-[2px_solid_transparent] md:flex-[0_0_50%] xl:flex-1"
       style={
         props.recommend
           ? {
@@ -70,28 +70,34 @@ interface CollapsibleItemProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean;
 }
 
-function CollapsibleItem(props: CollapsibleItemProps) {
+function CollapsibleItem({
+  title,
+  description,
+  toggleCollapsible,
+  open,
+  ...props
+}: CollapsibleItemProps) {
   return (
     <div
       {...props}
-      data-open={props.open}
+      data-open={open}
       className={cn(
         "relative space-y-8 rounded-3xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10 backdrop-blur",
         props.className,
       )}
-      onClick={props.toggleCollapsible}
+      onClick={toggleCollapsible}
     >
       <h2 className="max-w-[26rem] text-2xl font-medium capitalize text-primary">
-        {props.title}
+        {title}
       </h2>
       <Triangle
         className="absolute right-10 top-6 rotate-90 fill-pink-50 stroke-pink-50 transition-transform data-[open=true]:rotate-180"
         size={16}
         strokeWidth={4}
-        data-open={props.open}
+        data-open={open}
       />
       <AnimatePresence>
-        {props.open && (
+        {open && (
           <motion.p
             key="modal"
             className="capitalize"
@@ -99,7 +105,7 @@ function CollapsibleItem(props: CollapsibleItemProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {props.description}
+            {description}
           </motion.p>
         )}
       </AnimatePresence>
@@ -108,7 +114,11 @@ function CollapsibleItem(props: CollapsibleItemProps) {
 }
 
 export default function Services() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({});
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    breakpoints: {
+      "(min-width: 80rem)": { active: false },
+    },
+  });
 
   React.useEffect(() => {
     if (!emblaApi) return;
@@ -141,7 +151,7 @@ export default function Services() {
           We&apos;re plan to make your business even bigger
         </p>
       </div>
-      <div className="mx-auto my-10 w-[90%] max-w-[82rem] pb-10">
+      <div className="mx-auto my-10 w-[90%] max-w-7xl pb-10">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-10">
             {SERVICES.map((service, i) => (

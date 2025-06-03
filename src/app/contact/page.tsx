@@ -8,7 +8,7 @@ import React from "react";
 export default function Contact() {
   return (
     <>
-      <div className="mx-auto mt-24 grid w-[90%] max-w-[82rem] grid-cols-2 gap-12">
+      <div className="mx-auto mt-24 grid w-[90%] max-w-7xl grid-cols-2 gap-12">
         <div className="relative">
           <div
             className="absolute -left-1/4 top-1/2 -z-10 h-[35rem] w-[70rem] -translate-y-1/2"

@@ -65,7 +65,7 @@ export default function About() {
       <Title className="mt-24 py-6 text-center text-5xl text-primary">
         About Us
       </Title>
-      <div className="mx-auto w-[90%] max-w-[82rem] pb-10">
+      <div className="mx-auto w-[90%] max-w-7xl pb-10">
         <div className="grid grid-cols-2 items-center gap-20">
           <div className="flex h-full flex-col justify-between">
             <h2 className="text-5xl font-bold">
