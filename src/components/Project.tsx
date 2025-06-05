@@ -42,7 +42,7 @@ function ProjectItem({ title, description, ...props }: ProjectItemProps) {
 
 export function Project() {
   return (
-    <section className="grid grid-cols-1 gap-y-4 xl:grid-cols-3 xl:grid-rows-3 xl:gap-y-2">
+    <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-3 xl:gap-y-2">
       <ProjectItem
         title="Quiz Lobby"
         description="QuizLobby is a fun, easy way for students to practice university-level quizzes and prep with confidence."
@@ -72,16 +72,17 @@ export function Project() {
         </Link>
       </div>
       <ProjectItem
+        className="md:col-span-2 xl:col-span-1"
         title="CreativeDesign"
         description="Creative design solutions that blend UX/UI and visual storytelling to elevate user experience and communicate your brand with clarity and impact."
       />
-      <div className="xl:hidden">
-        <p className="mb-8 text-3xl font-bold text-gray-100">
+      <div className="md:col-span-2 md:flex md:items-center md:justify-between xl:hidden">
+        <p className="mb-8 text-3xl font-bold text-gray-100 md:mb-0">
           Start your project with us today!
         </p>
         <Link
           href="/about"
-          className="block w-full rounded-xl bg-primary px-12 py-4 text-center font-bold text-neutral-900"
+          className="block w-full rounded-xl bg-primary px-12 py-4 text-center font-bold text-neutral-900 md:w-fit"
         >
           Start Now
         </Link>

@@ -14,8 +14,8 @@ interface ServiceItemProps {
 
 function ServiceItem(props: ServiceItemProps) {
   return (
-    <div className="relative flex w-full flex-1 flex-col xl:p-8">
-      <div className="group relative flex h-[28rem] flex-col items-center overflow-hidden rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10 backdrop-blur">
+    <div className="relative flex w-full flex-col md:flex-[1_0_calc(50%-1rem)] xl:flex-1 xl:p-8">
+      <div className="group relative flex flex-col items-center overflow-hidden rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10 backdrop-blur md:h-[28rem]">
         <motion.div
           key={"sheen"}
           initial={{ translateX: "-44rem", rotate: "45deg" }}
@@ -39,7 +39,7 @@ function ServiceItem(props: ServiceItemProps) {
       {props.large && (
         <Link
           href={"/services"}
-          className="mt-4 hidden flex-1 items-end justify-between rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-10 py-4 text-2xl font-light backdrop-blur md:flex"
+          className="mt-4 hidden flex-1 items-end justify-between rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-10 py-4 text-2xl font-light backdrop-blur xl:flex"
         >
           <p>
             Explore our <br />
@@ -55,7 +55,7 @@ function ServiceItem(props: ServiceItemProps) {
 export function Service() {
   return (
     <section className="my-10">
-      <div className="flex flex-col items-end justify-center gap-4 lg:flex-row xl:gap-0">
+      <div className="flex flex-col flex-wrap items-end justify-center gap-4 md:flex-row xl:gap-0">
         <ServiceItem
           icon={<Settings />}
           title="POS & In-House Systems"
@@ -74,7 +74,7 @@ export function Service() {
         />
         <Link
           href={"/services"}
-          className="mt-4 flex w-full flex-1 items-end justify-between rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-10 py-4 text-2xl font-light backdrop-blur md:hidden"
+          className="mt-4 flex h-full w-full flex-1 items-end justify-between rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-10 py-4 text-2xl font-light backdrop-blur md:flex-[1_0_calc(50%-1rem)] xl:hidden"
         >
           <p>
             Explore our <br />

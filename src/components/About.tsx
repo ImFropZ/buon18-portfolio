@@ -6,8 +6,8 @@ import React from "react";
 export function About() {
   return (
     <section className="my-10" id="about-section">
-      <div className="flex flex-col-reverse gap-20 md:flex-row xl:gap-60">
-        <div className="relative hidden md:block">
+      <div className="flex flex-col-reverse gap-10 md:flex-row xl:gap-60">
+        <div className="relative hidden xl:block">
           <Image
             src="/person.png"
             width={311}

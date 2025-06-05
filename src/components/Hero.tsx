@@ -22,7 +22,7 @@ export function Hero(props: HeroProps) {
       <motion.h1
         initial={{ opacity: 0.4 }}
         animate={{ opacity: 1, transition: { duration: 0.3 } }}
-        className="mt-6 w-full max-w-[60ch] text-nowrap text-[14vw] font-extrabold leading-tight xl:text-[11.8rem]"
+        className="mt-6 w-full max-w-[60ch] text-nowrap text-[14.3vw] font-extrabold leading-tight xl:text-[11.8rem]"
         style={{
           backgroundImage:
             "linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.2) 100%)",
@@ -54,7 +54,7 @@ export function Hero(props: HeroProps) {
         </motion.p>
       </div>
 
-      <div className="mt-16 flex flex-col justify-between gap-4 xl:flex-row">
+      <div className="mt-16 flex flex-col justify-between gap-4 md:flex-row">
         <div className="flex flex-col">
           <h2 className="text-2xl xl:text-4xl">
             YOUR PARTNER IN IT <br className="hidden xl:block" />
@@ -80,7 +80,7 @@ export function Hero(props: HeroProps) {
 
         <Link
           href={"/about"}
-          className="rounded-lg border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-16 py-6 text-center text-2xl backdrop-blur xl:self-end"
+          className="rounded-lg border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 px-16 py-6 text-center text-2xl backdrop-blur md:self-end"
         >
           Get Started
         </Link>

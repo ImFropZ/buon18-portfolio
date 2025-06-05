@@ -122,7 +122,7 @@ export function Footer({ ...props }: FooterProps) {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-10 text-sm font-normal leading-5 tracking-wide text-gray-200">
+        <div className="mx-auto mb-4 mt-10 text-sm font-normal leading-5 tracking-wide text-gray-200">
           <p>
             @Copyright {new Date().getFullYear()} All rights reserved - Buon18
           </p>

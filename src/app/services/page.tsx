@@ -13,7 +13,7 @@ import { cn } from "@/components/utils";
 function ServiceItem(props: (typeof SERVICES)[number]) {
   return (
     <div
-      className="after:_border-gradient relative flex-[0_0_100%] overflow-hidden rounded-2xl p-8 after:absolute after:inset-0 after:-z-20 after:content-normal after:rounded-2xl after:border-2 after:border-[2px_solid_transparent] md:flex-[0_0_50%] xl:flex-1"
+      className="after:_border-gradient relative flex-[0_0_98%] overflow-hidden rounded-2xl p-8 after:absolute after:inset-0 after:-z-20 after:content-normal after:rounded-2xl after:border-2 after:border-[2px_solid_transparent] md:flex-[0_0_50%] xl:flex-1"
       style={
         props.recommend
           ? {
@@ -87,7 +87,7 @@ function CollapsibleItem({
       )}
       onClick={toggleCollapsible}
     >
-      <h2 className="max-w-[26rem] text-2xl font-medium capitalize text-primary">
+      <h2 className="w-[90%] max-w-[26rem] text-lg font-medium capitalize text-primary md:text-2xl">
         {title}
       </h2>
       <Triangle
@@ -100,7 +100,7 @@ function CollapsibleItem({
         {open && (
           <motion.p
             key="modal"
-            className="capitalize"
+            className="text-sm capitalize md:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -171,12 +171,13 @@ export default function Services() {
           your business!
         </p>
 
-        <div className="mt-10 grid grid-rows-2 items-center gap-4 rounded-2xl border border-primary bg-gradient-to-b from-primary to-primary/10 p-6 lg:grid-cols-3 lg:grid-rows-1 lg:p-12">
+        <div className="mt-10 grid items-center gap-4 rounded-2xl border border-primary bg-gradient-to-b from-primary to-primary/10 p-6 lg:grid-cols-3 lg:grid-rows-1 lg:p-12">
           <div className="lg:col-span-2">
-            <Title className="text-6xl">
-              Bring Your Business Online <br /> with Buon18
+            <Title className="text-3xl xl:text-6xl">
+              Bring Your Business Online <br className="hidden xl:block" /> with
+              Buon18
             </Title>
-            <p className="mt-6 text-center lg:text-start lg:text-xl">
+            <p className="lg:text-start lg:text-xl xl:mt-6 xl:text-center">
               Custom IT Solutions Designed for Cambodian Businesses
             </p>
           </div>
@@ -190,12 +191,16 @@ export default function Services() {
           </Link>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 gap-20">
+        <div className="mt-20 grid grid-cols-1 gap-20 xl:grid-cols-2">
           <div className="space-y-8">
-            <h1 className="text-[4rem] font-medium">
+            <h1 className="text-4xl font-medium md:text-[4rem]">
               Got Questions? <br />
               We&apos;ve Got Answers.
             </h1>
+            <p className="capitalize xl:hidden">
+              Here are some quick answers to the most common questions about our
+              services — from development to design and everything in between.
+            </p>
             <div className="flex flex-col gap-4">
               <CollapsibleItem
                 title="Do you offer ready-made or custom websites?"
@@ -223,7 +228,7 @@ export default function Services() {
               />
             </div>
           </div>
-          <div>
+          <div className="hidden xl:block">
             <p className="w-[32rem] text-xl capitalize">
               Here are some quick answers to the most common questions about our
               services — from development to design and everything in between.
