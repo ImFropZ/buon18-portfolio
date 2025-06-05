@@ -78,7 +78,12 @@ export function Menu() {
           <Link href="tel:+855764184185">
             <span>{t("telephone.number")}</span>
           </Link>
-          <Link href="/contact">
+          <Link
+            href="/contact"
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
             <span className="cursor-pointer select-none text-primary">
               {t("contact.nav")}
             </span>
@@ -89,12 +94,7 @@ export function Menu() {
         <Link href="tel:+855764184185">
           <span>{t("telephone.number")}</span>
         </Link>
-        <Link
-          href="/contact"
-          onClick={() => {
-            setOpen(false);
-          }}
-        >
+        <Link href="/contact">
           <span className="cursor-pointer select-none text-primary">
             {t("contact.nav")}
           </span>

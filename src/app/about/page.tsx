@@ -66,19 +66,19 @@ export default function About() {
         About Us
       </Title>
       <div className="mx-auto w-[90%] max-w-7xl pb-10">
-        <div className="grid grid-cols-2 items-center gap-20">
-          <div className="flex h-full flex-col justify-between">
-            <h2 className="text-5xl font-bold">
+        <div className="mb-10 grid grid-rows-1 items-center gap-20 md:mb-0 md:grid-rows-2 xl:grid-cols-2 xl:grid-rows-1">
+          <div className="flex flex-col justify-between xl:h-full">
+            <h2 className="text-3xl font-bold xl:text-5xl">
               Building Digital Solutions with Heart and Hustle
             </h2>
-            <p className="max-w-[36rem] text-2xl leading-[150%]">
+            <p className="max-w-[36rem] text-lg leading-[150%] xl:text-2xl">
               Buon18 is a team of tech enthusiasts from Cambodia, founded in
               2022 by ambitious students. Starting as freelancers, we now offer
               tailored digital solutions that help local businesses grow with
               confidence.
             </p>
           </div>
-          <div className="relative inset-0 flex items-center justify-center">
+          <div className="relative inset-0 row-start-1 hidden items-center justify-center md:flex xl:row-start-auto">
             <Image src="/about-buon18.png" alt="" width={434} height={341} />
             <div
               className="absolute left-1/2 top-1/2 -z-10 h-[40rem] w-[50rem] -translate-x-1/2 -translate-y-1/2"
@@ -89,20 +89,22 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="mt-20 grid grid-cols-2 gap-20">
-          <div className="rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-16">
-            <h2 className="text-[2.5rem] font-bold text-primary">
+        <div className="grid gap-4 xl:mt-20 xl:grid-cols-2 xl:gap-20">
+          <div className="rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-4 xl:p-16">
+            <h2 className="text-2xl font-bold text-primary xl:text-[2.5rem]">
               Our Mission
             </h2>
-            <p className="mt-7 text-2xl">
+            <p className="mt-7 xl:text-2xl">
               To provide practical, affordable, and customized digital solutions
               that help local businesses grow — through smart systems, creative
               design, and reliable development.
             </p>
           </div>
-          <div className="h-fit self-end rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-12">
-            <h2 className="text-[2rem] font-bold text-primary">Our Vision</h2>
-            <p className="mt-5 text-xl">
+          <div className="h-fit self-end rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-4 xl:p-12">
+            <h2 className="text-2xl font-bold text-primary xl:text-[2rem]">
+              Our Vision
+            </h2>
+            <p className="mt-5 xl:text-xl">
               To be a trusted freelance team that supports the digital journey
               of small and growing businesses across Cambodia — turning everyday
               ideas into real, working solutions.
@@ -118,20 +120,20 @@ export default function About() {
             together to turn ideas into real, impactful solutions — built with
             creativity, care, and collaboration.
           </p>
-          <div className="grid grid-cols-2 items-center gap-20">
+          <div className="grid items-center gap-4 md:gap-8 xl:grid-cols-2 xl:gap-20">
             {TEAM.map((member, i) => {
               if (i === TEAM.length - 1) {
                 return (
-                  <div className="col-span-2" key={i}>
-                    <div className="mx-auto flex max-w-[calc(50%-2.5rem)] rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10">
-                      <div className="flex flex-1 flex-col gap-2">
-                        <p className="max-w-96 text-xl leading-7 text-white/60">
+                  <div className="xl:col-span-2" key={i}>
+                    <div className="mx-auto flex flex-col-reverse items-center rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-2 md:flex-row md:p-10 xl:max-w-[calc(50%-2.5rem)]">
+                      <div className="mt-2 flex flex-1 flex-col-reverse gap-2 self-start md:flex-col">
+                        <p className="leading-7 text-white/60 md:max-w-96 md:text-xl">
                           {member.description}
                         </p>
-                        <h3 className="text-2xl">
+                        <h3 className="text-lg md:text-2xl">
                           {member.name}{" "}
-                          <span className="text-xl text-white/60">
-                            \ <br />
+                          <span className="text-white/60 md:text-xl">
+                            \ <br className="hidden md:block" />
                             {member.role}
                           </span>
                         </h3>
@@ -139,7 +141,7 @@ export default function About() {
                       <img
                         src={member.picture}
                         alt=""
-                        className="h-full rounded-full"
+                        className="aspect-square h-full rounded-full"
                       />
                     </div>
                   </div>
@@ -147,17 +149,17 @@ export default function About() {
               }
               return (
                 <div
-                  className="flex items-center rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10"
+                  className="flex flex-col-reverse items-center rounded-2xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-2 md:flex-row md:p-10"
                   key={i}
                 >
-                  <div className="flex flex-1 flex-col gap-2">
-                    <p className="max-w-96 text-xl leading-7 text-white/60">
+                  <div className="mt-2 flex flex-1 flex-col-reverse gap-2 self-start md:flex-col">
+                    <p className="leading-7 text-white/60 md:max-w-96 md:text-xl">
                       {member.description}
                     </p>
-                    <h3 className="text-2xl">
+                    <h3 className="text-lg md:text-2xl">
                       {member.name}{" "}
-                      <span className="text-xl text-white/60">
-                        \ <br />
+                      <span className="text-white/60 md:text-xl">
+                        \ <br className="hidden md:block" />
                         {member.role}
                       </span>
                     </h3>
@@ -165,19 +167,23 @@ export default function About() {
                   <img
                     src={member.picture}
                     alt=""
-                    className="h-full rounded-full"
+                    className="aspect-square h-full rounded-full"
                   />
                 </div>
               );
             })}
           </div>
         </div>
-        <div className="mt-32 grid grid-cols-2">
+        <div className="mt-32 grid xl:grid-cols-2">
           <div>
             <h2 className="text-7xl font-medium text-primary">
-              Why Work <br /> With Us?
+              Why Work <br className="md:hidden" /> With Us?
             </h2>
-            <div className="mt-20 grid grid-cols-2 gap-12">
+            <p className="max-w-[28rem] text-xl leading-[150%] xl:hidden">
+              At Buon18, we&apos;re more than just a freelance team — we&apos;re
+              your digital partner. Here&apos;s what sets us apart:
+            </p>
+            <div className="mt-20 grid gap-12 xl:grid-cols-2">
               {WHY_WORK_WITH_US.map((item, i) => (
                 <div className="flex gap-6 text-lg" key={i}>
                   <span className="flex flex-col gap-2">
@@ -192,7 +198,7 @@ export default function About() {
               ))}
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="hidden flex-col items-center xl:flex">
             <p className="max-w-[28rem] text-xl leading-[150%]">
               At Buon18, we&apos;re more than just a freelance team — we&apos;re
               your digital partner. Here&apos;s what sets us apart:

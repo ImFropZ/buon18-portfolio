@@ -58,7 +58,7 @@ export function Footer({ ...props }: FooterProps) {
         <div className="grid grid-cols-1 gap-20 lg:grid-cols-3">
           <div className="flex flex-col gap-6">
             <Title className="text-4xl text-white">Buon18</Title>
-            <p className="text-sm text-gray-200">{t("footer.description")}</p>
+            <p className="text-gray-200">{t("footer.description")}</p>
             <div className="flex gap-2">
               {MEDIAS.map((m, i) => {
                 return (
