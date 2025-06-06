@@ -53,7 +53,10 @@ export function ContactForm({ ...props }: ContactFormProps) {
       </h2>
       <form
         {...props}
-        className={cn("grid grid-cols-2 gap-6 pt-4", props.className)}
+        className={cn(
+          "grid grid-cols-1 gap-6 pt-4 md:grid-cols-2",
+          props.className,
+        )}
         onSubmit={form.handleSubmit((data) => {
           toast
             .promise(onSend(data), {
@@ -79,6 +82,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
                 field={field}
                 errorField={form.formState.errors.first_name}
                 label="First name"
+                placeholder="John"
               />
             );
           }}
@@ -92,6 +96,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
                 field={field}
                 errorField={form.formState.errors.last_name}
                 label="Last name"
+                placeholder="Doe"
               />
             );
           }}
@@ -105,6 +110,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
                 field={field}
                 errorField={form.formState.errors.email}
                 label="Email"
+                placeholder="johndoe@email.com"
               />
             );
           }}
@@ -118,6 +124,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
                 field={field}
                 errorField={form.formState.errors.phone_number}
                 label="Phone number"
+                placeholder="+855 76 418 4185"
               />
             );
           }}
@@ -128,7 +135,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
           render={({ field }) => {
             return (
               <SelectFormField
-                className="col-span-2"
+                className="md:col-span-2"
                 field={field}
                 errorField={form.formState.errors.service}
                 label="Service"
@@ -160,7 +167,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
           render={({ field }) => {
             return (
               <InputFormField
-                className="col-span-2"
+                className="md:col-span-2"
                 field={field}
                 errorField={form.formState.errors.message}
                 label="Message"
@@ -170,7 +177,7 @@ export function ContactForm({ ...props }: ContactFormProps) {
           }}
         />
         <Button
-          className="relative col-[2_/_span_1] ml-auto w-fit rounded-lg bg-primary p-3 px-6 text-black transition-colors hover:bg-primary hover:text-white"
+          className="relative ml-auto w-fit rounded-lg bg-primary p-3 px-6 text-black transition-colors hover:bg-primary hover:text-white md:col-[2_/_span_1]"
           disabled={buttonDisable}
         >
           <span className="font-bold">Send Message</span>
