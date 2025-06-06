@@ -141,7 +141,7 @@ export default function About() {
                       <img
                         src={member.picture}
                         alt=""
-                        className="aspect-square h-full rounded-full"
+                        className="aspect-square h-full w-16 rounded-full md:w-auto"
                       />
                     </div>
                   </div>
@@ -167,7 +167,7 @@ export default function About() {
                   <img
                     src={member.picture}
                     alt=""
-                    className="aspect-square h-full rounded-full"
+                    className="aspect-square h-full w-16 rounded-full md:w-auto"
                   />
                 </div>
               );
