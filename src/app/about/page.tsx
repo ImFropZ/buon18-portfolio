@@ -55,7 +55,7 @@ const TEAM = [
     name: "Sotharoth Yim",
     role: "Developer",
     description: "I build the systems that keep everything running smoothly.",
-    picture: "https://loremfaces.net/128/id/4.jpg",
+    picture: "/team/sotharoth-yim.png",
   },
 ];
 
