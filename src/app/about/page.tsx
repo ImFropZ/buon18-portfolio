@@ -31,7 +31,7 @@ const TEAM = [
     role: "Developer",
     description:
       "I connect front and back ends to create smooth, functional platforms.",
-    picture: "https://loremfaces.net/128/id/2.jpg",
+    picture: "/team/tangmeng-lim.png",
   },
   {
     name: "Viteary Phay",

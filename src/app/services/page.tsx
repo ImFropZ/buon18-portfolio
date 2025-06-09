@@ -36,7 +36,14 @@ function ServiceItem(props: (typeof SERVICES)[number]) {
       )}
       <h1 className="text-2xl font-bold">{props.name}</h1>
       <p className="mt-2 font-bold">
-        Starting from <span className="text-primary">${props.startFrom}</span>
+        {typeof props.startFrom === "number" ? (
+          <>
+            Starting from{" "}
+            <span className="text-primary">${props.startFrom}</span>
+          </>
+        ) : (
+          <span className="text-primary">{props.startFrom}</span>
+        )}
       </p>
       <button
         className="_border-gradient data-[recommend=true]:_border-gradient-white mt-4 w-full rounded-3xl border-2 py-2 font-medium data-[recommend=true]:text-primary"
@@ -65,7 +72,7 @@ function ServiceItem(props: (typeof SERVICES)[number]) {
 
 interface CollapsibleItemProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   toggleCollapsible: () => void;
   open: boolean;
 }
@@ -85,7 +92,6 @@ function CollapsibleItem({
         "relative space-y-8 rounded-3xl border-2 border-white/30 bg-gradient-to-b from-white/5 to-white/0 p-10 backdrop-blur",
         props.className,
       )}
-      onClick={toggleCollapsible}
     >
       <h2 className="w-[90%] max-w-[26rem] text-lg font-medium capitalize text-primary md:text-2xl">
         {title}
@@ -94,24 +100,172 @@ function CollapsibleItem({
         className="absolute right-10 top-6 rotate-90 fill-pink-50 stroke-pink-50 transition-transform data-[open=true]:rotate-180"
         size={16}
         strokeWidth={4}
+        onClick={toggleCollapsible}
         data-open={open}
       />
       <AnimatePresence>
         {open && (
-          <motion.p
+          <motion.div
             key="modal"
-            className="text-sm capitalize md:text-base"
+            className="md:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             {description}
-          </motion.p>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
 }
+
+const FAQs = [
+  {
+    title: "Do you offer ready-made or custom websites?",
+    description: (
+      <>
+        <p>
+          <span className="font-medium text-primary">Yes</span> — we offer both
+          ready-made templates and fully custom-built websites, depending on
+          your needs and goals.
+        </p>
+
+        <ul className="my-4 list-disc">
+          <li>
+            <span className="font-medium text-primary">Ready-Made:</span> Ideal
+            for quick launches or budget-friendly solutions.
+          </li>
+          <li>
+            <span className="font-medium text-primary">Custom:</span> Tailored
+            from the ground up to fit your brand, functionality, and growth
+            plans.
+          </li>
+        </ul>
+
+        <p>
+          We'll help you choose the best option based on your timeline, budget,
+          and project requirements.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "How long does a project take?",
+    description: (
+      <>
+        <p>
+          Project timelines can vary based on complexity, scope, and
+          responsiveness. Here's a general breakdown:
+        </p>
+        <ul className="my-4 list-disc">
+          <li>
+            <span className="font-medium text-primary">
+              Fastest Turnaround:
+            </span>{" "}
+            Projects can be completed in as little as 2 weeks, including the
+            initial information-gathering phase.
+          </li>
+          <li>
+            <span className="font-medium text-primary">Typical Duration:</span>{" "}
+            For small to medium system-based projects, timelines usually range
+            from 1 to 1.5 months.
+          </li>
+          <li>
+            <span className="font-medium text-primary">Flexible Timeline:</span>{" "}
+            The exact duration depends on the type and scale of the project. In
+            some cases, especially with evolving requirements, a definitive end
+            date may be difficult to determine upfront.
+          </li>
+        </ul>
+        <p>
+          We always aim to deliver efficiently without compromising quality and
+          will work closely with you to define clear milestones and timelines.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "How do I start?",
+    description: (
+      <>
+        <p>
+          Getting started is simple — choose the method that works best for you:
+        </p>
+
+        <ul className="my-4 list-disc">
+          <li>
+            <span className="font-medium text-primary">Contact Form:</span> Fill
+            out the form on our{" "}
+            <Link href="/contact" className="text-primary underline">
+              Contact Us
+            </Link>{" "}
+            page and we'll get back to you promptly.
+          </li>
+          <li>
+            <span className="font-medium text-primary">Email:</span> Reach out
+            directly at{" "}
+            <a
+              href="mailto:buon18kh@gmail.com"
+              target="_blank"
+              className="text-primary underline"
+            >
+              buon18kh@gmail.com
+            </a>{" "}
+            with your project details.
+          </li>
+          <li>
+            <span className="font-medium text-primary">Telegram:</span> Message
+            us on Telegram at{" "}
+            <a
+              href="https://t.me/buon18"
+              target="_blank"
+              className="text-primary underline"
+            >
+              @buon18
+            </a>{" "}
+            for quick communication.
+          </li>
+        </ul>
+
+        <p>
+          We&apos;ll guide you through the next steps based on your needs and
+          goals.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Can I customize the Ready-Made system?",
+    description: (
+      <>
+        <p>
+          <span className="font-medium text-primary">Yes, you can!</span> Our
+          ready-made systems are flexible and can be customized to better fit
+          your needs.
+        </p>
+
+        <ul className="my-4 list-disc">
+          <li>
+            <span className="font-medium text-primary">Timeline:</span>{" "}
+            Customizations may extend the delivery time depending on the level
+            of changes required.
+          </li>
+          <li>
+            <span className="font-medium text-primary">Cost:</span> Additional
+            fees may apply based on the complexity and amount of custom work
+            requested.
+          </li>
+        </ul>
+
+        <p>
+          We'll discuss your requirements upfront and provide a clear estimate
+          before getting started.
+        </p>
+      </>
+    ),
+  },
+];
 
 export default function Services() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -125,12 +279,9 @@ export default function Services() {
     emblaApi.scrollTo(1);
   }, [emblaApi]);
 
-  const [collapsibleState, setCollapsibleState] = React.useState([
-    true,
-    false,
-    false,
-    false,
-  ]);
+  const [collapsibleState, setCollapsibleState] = React.useState(
+    FAQs.map((_, i) => i === 0),
+  );
 
   const toggleCollapsible = (toggleIndex: number) => {
     if (toggleIndex > 3 || toggleIndex < 0) return;
@@ -193,7 +344,7 @@ export default function Services() {
 
         <div className="mt-20 grid grid-cols-1 gap-20 xl:grid-cols-2">
           <div className="space-y-8">
-            <h1 className="text-4xl font-medium md:text-[4rem]">
+            <h1 className="text-4xl font-medium md:text-[4rem] md:leading-tight">
               Got Questions? <br />
               We&apos;ve Got Answers.
             </h1>
@@ -202,30 +353,17 @@ export default function Services() {
               services — from development to design and everything in between.
             </p>
             <div className="flex flex-col gap-4">
-              <CollapsibleItem
-                title="Do you offer ready-made or custom websites?"
-                description="Both. Choose a template or go fully custom — your call."
-                toggleCollapsible={() => toggleCollapsible(0)}
-                open={collapsibleState[0]}
-              />
-              <CollapsibleItem
-                title="How long does a project take?"
-                description=""
-                toggleCollapsible={() => toggleCollapsible(1)}
-                open={collapsibleState[1]}
-              />
-              <CollapsibleItem
-                title="How do I start?"
-                description=""
-                toggleCollapsible={() => toggleCollapsible(2)}
-                open={collapsibleState[2]}
-              />
-              <CollapsibleItem
-                title="Can I customize the POS system?"
-                description=""
-                toggleCollapsible={() => toggleCollapsible(3)}
-                open={collapsibleState[3]}
-              />
+              {FAQs.map((faq, i) => {
+                return (
+                  <CollapsibleItem
+                    key={i}
+                    title={faq.title}
+                    description={faq.description}
+                    toggleCollapsible={() => toggleCollapsible(i)}
+                    open={collapsibleState[i]}
+                  />
+                );
+              })}
             </div>
           </div>
           <div className="hidden xl:block">

@@ -2,7 +2,7 @@ export const SERVICES = [
   {
     name: "POS & In-House Systems",
     description: "Streamline Your Business Operations",
-    startFrom: 300,
+    startFrom: 1000,
     recommend: false,
     features: [
       "Customizable POS System.",
@@ -46,15 +46,17 @@ export const SERVICES = [
   },
   {
     name: "Customizable Package",
-    description: "Tailored to Your Needs",
-    startFrom: 300,
+    description: "Tailored to Your Needs and Built for Flexibility",
+    startFrom: "Negotiable based on scope",
     recommend: false,
     features: [
-      "Mix & match POS, Website, or Design services.",
-      "Fully customized to your business.",
-      "Transparent & flexible pricing.",
-      "Scalable solutions for growth.",
-      "Extended support & maintenance.",
+      "Mix & match POS, Website, Branding, or UI/UX services.",
+      "Fully customized to suit your business goals.",
+      "Update content, labels, or navigation to enhance usability.",
+      "Refactor or rebuild existing systems for better performance.",
+      "Transparent & flexible pricing tailored to your needs.",
+      "Scalable solutions designed for long-term growth.",
+      "Extended support, maintenance, and upgrade planning.",
     ],
   },
 ];
