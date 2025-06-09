@@ -144,8 +144,8 @@ const FAQs = [
         </ul>
 
         <p>
-          We'll help you choose the best option based on your timeline, budget,
-          and project requirements.
+          We&apos;ll help you choose the best option based on your timeline,
+          budget, and project requirements.
         </p>
       </>
     ),
@@ -156,7 +156,7 @@ const FAQs = [
       <>
         <p>
           Project timelines can vary based on complexity, scope, and
-          responsiveness. Here's a general breakdown:
+          responsiveness. Here&apos;s a general breakdown:
         </p>
         <ul className="my-4 list-disc">
           <li>
@@ -200,7 +200,7 @@ const FAQs = [
             <Link href="/contact" className="text-primary underline">
               Contact Us
             </Link>{" "}
-            page and we'll get back to you promptly.
+            page and we&apos;ll get back to you promptly.
           </li>
           <li>
             <span className="font-medium text-primary">Email:</span> Reach out
@@ -259,8 +259,8 @@ const FAQs = [
         </ul>
 
         <p>
-          We'll discuss your requirements upfront and provide a clear estimate
-          before getting started.
+          We&apos;ll discuss your requirements upfront and provide a clear
+          estimate before getting started.
         </p>
       </>
     ),
