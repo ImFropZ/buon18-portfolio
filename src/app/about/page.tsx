@@ -34,10 +34,10 @@ const TEAM = [
     picture: "/team/tangmeng-lim.png",
   },
   {
-    name: "Viteary Phay",
+    name: "Vitheary Phay",
     role: "Designer",
     description: "I design visuals that are clear, creative, and on-brand.",
-    picture: "https://loremfaces.net/128/id/1.jpg",
+    picture: "/team/vitheary-phay.png",
   },
   {
     name: "Chansopheak Oum",
