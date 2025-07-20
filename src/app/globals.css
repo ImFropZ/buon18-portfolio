@@ -2,152 +2,222 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 102, 204;
-  --background-start-rgb: 102, 204, 255;
-  --background-end-rgb: 0, 102, 204;
+body {
+  background-color: #0d131a;
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 102, 204, 255;
-    --background-end-rgb: 0, 102, 204;
-  }
-}
-
-/* Font Gotham */
+/* Font CabinetGrotesk */
 
 @font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-Thin.woff") format("woff");
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-ThinItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-Book.woff") format("woff");
-  font-weight: 400;
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-BookItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("/assets/fonts/Gotham-BlackItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic;
-}
-
-/* Font Hanuman */
-
-/* khmer */
-@font-face {
-  font-family: "Hanuman";
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJzdNvD15HhpJJBQMLtMKljWRo.woff2)
-    format("woff2");
-  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
-}
-
-/* khmer */
-@font-face {
-  font-family: "Hanuman";
-  font-style: normal;
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Light.woff2") format("woff2");
   font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJ0dNvD15HhpJJBQAr_LIVGZCNc.woff2)
-    format("woff2");
-  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+  font-style: normal;
 }
 
-/* khmer */
 @font-face {
-  font-family: "Hanuman";
-  font-style: normal;
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Regular.woff2") format("woff2");
   font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJxdNvD15HhpJJBSKrdObFn.woff2)
-    format("woff2");
-  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+  font-style: normal;
 }
 
-/* khmer */
 @font-face {
-  font-family: "Hanuman";
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CabinetGrotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Font Kantumruy Pro */
+
+/* khmer */
+@font-face {
+  font-family: "Kantumruy Pro";
+  font-style: italic;
+  font-weight: 100 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJ0dNvD15HhpJJBQBr4LIVGZCNc.woff2)
+  src: url(https://fonts.gstatic.com/s/kantumruypro/v9/1q2eY5aECkp34vEBSPFOmJxwlEbxcqWku2U.woff2)
     format("woff2");
   unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
 }
 
 /* khmer */
 @font-face {
-  font-family: "Hanuman";
+  font-family: "Kantumruy Pro";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 100 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/hanuman/v22/VuJ0dNvD15HhpJJBQCL6LIVGZCNc.woff2)
+  src: url(https://fonts.gstatic.com/s/kantumruypro/v9/1q2AY5aECkp34vEBSPFOmJxwlEjBe72g.woff2)
     format("woff2");
   unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
 }
 
 ._3d-text {
   text-shadow:
-    1px 1px #6CF,
-    2px 2px #6CF,
-    3px 3px #6CF;
+    1px 1px #6cf,
+    2px 2px #6cf,
+    3px 3px #6cf;
+}
+
+*:has([data-modal-open]) {
+  overflow: hidden;
+}
+
+@layer components {
+  ._border-gradient {
+    background:
+      linear-gradient(#0d131a 0 0) padding-box,
+      linear-gradient(45deg, #0d131a 5%, #98cb33) border-box;
+    border: 2px solid transparent;
+  }
+
+  ._border-gradient-white {
+    background:
+      linear-gradient(#ffffff 0 0) padding-box,
+      linear-gradient(45deg, #0d131a 5%, #98cb33) border-box;
+    border: 2px solid transparent;
+  }
+}
+
+.markdown {
+  & * {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  /* Header */
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+
+  & h1 {
+    font-size: 2.5rem;
+  }
+
+  & h2 {
+    font-size: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.75rem;
+  }
+
+  & h4 {
+    font-size: 1.5rem;
+  }
+
+  & h5 {
+    font-size: 1.35rem;
+  }
+
+  & h6 {
+    font-size: 1.2rem;
+  }
+
+  /* Pre (Code) */
+  & pre {
+    background-color: #1f2937;
+    padding: 0.8rem;
+    overflow: auto;
+
+    &:not(.hljs-name) {
+      color: #fff;
+    }
+  }
+
+  /* A (Link) */
+  & a {
+    text-decoration: underline;
+    position: relative;
+    padding-right: 1rem;
+
+    &::after {
+      content: url("/assets/svg/external-link.svg");
+      margin-left: 0.2rem;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  /* Blockquote */
+  & blockquote {
+    border-left: 4px solid #98cb33;
+    background-color: #0a1624;
+    margin-left: 0;
+    padding: 0.2rem 0 0.2rem 1rem;
+  }
+
+  /* Code */
+  & p > code {
+    font-size: 1.2rem;
+    background-color: #0d131a;
+    color: #fff;
+    padding: 0 0.2rem;
+  }
+
+  /* List */
+  & ul,
+  ol {
+    padding-left: 2rem;
+  }
+
+  & ul {
+    list-style-type: disc;
+  }
+
+  & ol {
+    list-style-type: decimal;
+  }
+
+  /* KBD */
+  & kbd {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0.1rem 0.3rem;
+    font-size: 1rem;
+  }
 }
