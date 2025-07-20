@@ -2,7 +2,7 @@ export const SERVICES = [
   {
     name: "POS & In-House Systems",
     description: "Streamline Your Business Operations",
-    startFrom: 1000,
+    startFrom: 958,
     recommend: false,
     features: [
       "Customizable POS System.",
@@ -21,7 +21,7 @@ export const SERVICES = [
       </>
     ),
     description: "Start your Business, Online Today!",
-    startFrom: 300,
+    startFrom: 278,
     recommend: true,
     features: [
       "Quick setup with ready-made templates.",
@@ -34,7 +34,7 @@ export const SERVICES = [
   {
     name: "Design Package - BrandCraft Studio",
     description: "Choose ONE of the following:",
-    startFrom: 300,
+    startFrom: 88,
     recommend: false,
     features: [
       "UX/UI Design - Improve user experience.",
