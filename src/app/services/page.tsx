@@ -13,7 +13,7 @@ import { cn } from "@/components/utils";
 function ServiceItem(props: (typeof SERVICES)[number]) {
   return (
     <div
-      className="after:_border-gradient relative flex-[0_0_98%] overflow-hidden rounded-2xl p-8 after:absolute after:inset-0 after:-z-20 after:content-normal after:rounded-2xl after:border-2 after:border-[2px_solid_transparent] md:flex-[0_0_50%] xl:flex-1"
+      className="after:_border-gradient relative flex flex-[0_0_98%] flex-col overflow-hidden rounded-2xl p-8 after:absolute after:inset-0 after:-z-20 after:content-normal after:rounded-2xl after:border-2 after:border-[2px_solid_transparent] md:flex-[0_0_50%] xl:flex-1"
       style={
         props.recommend
           ? {
@@ -45,12 +45,13 @@ function ServiceItem(props: (typeof SERVICES)[number]) {
           <span className="text-primary">{props.startFrom}</span>
         )}
       </p>
-      <button
-        className="_border-gradient data-[recommend=true]:_border-gradient-white mt-4 w-full rounded-3xl border-2 py-2 font-medium data-[recommend=true]:text-primary"
+      <Link
+        href={"/contact"}
+        className="_border-gradient data-[recommend=true]:_border-gradient-white mt-4 w-full rounded-3xl border-2 py-2 text-center font-medium data-[recommend=true]:text-primary"
         data-recommend={props.recommend}
       >
         {props.recommend ? "Start now" : "Contact Us"}
-      </button>
+      </Link>
 
       <hr className="my-4 h-0.5 w-full bg-white" />
 
