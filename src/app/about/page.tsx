@@ -43,13 +43,13 @@ const TEAM = [
     name: "Chansopheak Oum",
     role: "Developer",
     description: "I turn designs into responsive, user-friendly interfaces.",
-    picture: "https://loremfaces.net/128/id/3.jpg",
+    picture: "/team/chansopheak-oum.png",
   },
   {
     name: "Chan Ey Heng",
     role: "Designer",
     description: "I craft visual content that tells your brand's story.",
-    picture: "https://loremfaces.net/128/id/5.jpg",
+    picture: "https://placehold.co/128",
   },
   {
     name: "Sotharoth Yim",
