@@ -9,9 +9,17 @@ import { motion, useInView } from "motion/react";
 interface ProjectItemProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
+  external?: boolean;
+  href?: string;
 }
 
-function ProjectItem({ title, description, ...props }: ProjectItemProps) {
+function ProjectItem({
+  title,
+  description,
+  external,
+  href,
+  ...props
+}: ProjectItemProps) {
   const ref = React.useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
@@ -31,11 +39,15 @@ function ProjectItem({ title, description, ...props }: ProjectItemProps) {
       ></motion.div>
       <h2 className="text-2xl xl:text-4xl">{title}</h2>
       <p className="mt-6 xl:text-xl">{description}</p>
-      <ArrowRight
-        className="absolute bottom-8 right-10 w-fit text-[#707378]"
-        size={32}
-        strokeWidth={4}
-      />
+      {external && (
+        <Link href={href || "#"} target={external ? "_blank" : undefined}>
+          <ArrowRight
+            className="absolute bottom-8 right-10 w-fit text-[#707378]"
+            size={32}
+            strokeWidth={4}
+          />
+        </Link>
+      )}
     </div>
   );
 }
@@ -57,8 +69,8 @@ export function Project() {
       </div>
       <ProjectItem
         className="xl:col-start-2"
-        title="Restaurant System"
-        description="A smart, customizable restaurant system designed to simplify ordering, manage inventory, and speed up service — all in one place."
+        title="Buon18 Portfolio"
+        description="A clean, interactive portfolio with minimal UI and smooth animations — built to showcase creativity, professionalism, and personal work."
       />
       <div className="col-span-2 mt-auto hidden xl:block">
         <p className="mb-8 text-5xl text-gray-100">
@@ -73,7 +85,7 @@ export function Project() {
       </div>
       <ProjectItem
         className="md:col-span-2 xl:col-span-1"
-        title="CreativeDesign"
+        title="Creative Design"
         description="Creative design solutions that blend UX/UI and visual storytelling to elevate user experience and communicate your brand with clarity and impact."
       />
       <div className="md:col-span-2 md:flex md:items-center md:justify-between xl:hidden">

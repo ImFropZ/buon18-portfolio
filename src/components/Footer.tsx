@@ -70,7 +70,7 @@ export function Footer({ ...props }: FooterProps) {
             </div>
           </div>
           <div className="space-y-4">
-            <Title className="text-4xl text-white">Company</Title>
+            <Title className="text-4xl text-white">Freelance Team</Title>
             <ul className="text-lg font-medium">
               <li>
                 <Link href="/" prefetch={true} className="hover:text-primary">
