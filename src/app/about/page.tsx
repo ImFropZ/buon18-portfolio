@@ -49,7 +49,7 @@ const TEAM = [
     name: "Chan Ey Heng",
     role: "Designer",
     description: "I craft visual content that tells your brand's story.",
-    picture: "https://placehold.co/128",
+    picture: "/team/chaney-heng.png",
   },
   {
     name: "Sotharoth Yim",
