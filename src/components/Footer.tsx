@@ -47,7 +47,7 @@ export function Footer({ ...props }: FooterProps) {
   const t = useTranslations();
 
   return (
-    <div className="mt-auto">
+    <div className="mt-auto flex flex-1 items-end">
       <div
         {...props}
         className={cn(
