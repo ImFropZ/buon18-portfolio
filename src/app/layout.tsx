@@ -28,7 +28,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <link rel="preload" href="/hero-buon18.png" as="image" />
-      <body className="overflow-x-hidden font-primary">
+      <body className="flex min-h-screen flex-col overflow-x-hidden font-primary">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
